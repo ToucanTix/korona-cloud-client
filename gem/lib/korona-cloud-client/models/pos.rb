@@ -396,7 +396,7 @@ module KoronaCloudClient
       warn '[DEPRECATED] the `valid?` method is obsolete'
       fiscal_service_type_validator = EnumAttributeValidator.new('String', ["DE_TSE_FISKALY", "DE_TSE_SWISSBIT", "EFSTA", "NONE"])
       return false unless fiscal_service_type_validator.valid?(@fiscal_service_type)
-      type_validator = EnumAttributeValidator.new('String', ["STANDARD", "EXTERNAL", "EXTERNAL_WEBSHOP", "TEMPORARY", "INVOICING", "EXPRESS", "SCO", "WEBSHOP", "MISC"])
+      type_validator = EnumAttributeValidator.new('String', ["STANDARD", "EXTERNAL", "EXTERNAL_WEBSHOP", "TEMPORARY", "INVOICING", "EXPRESS", "SCO", "WEBSHOP", "MISC", "KORONA_POS_NEXT"])
       return false unless type_validator.valid?(@type)
       true
     end
