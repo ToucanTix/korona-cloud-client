@@ -424,7 +424,7 @@ module KoronaCloudClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
-      validator = EnumAttributeValidator.new('String', ["STANDARD", "EXTERNAL", "EXTERNAL_WEBSHOP", "TEMPORARY", "INVOICING", "EXPRESS", "SCO", "WEBSHOP", "MISC"])
+      validator = EnumAttributeValidator.new('String', ["STANDARD", "EXTERNAL", "EXTERNAL_WEBSHOP", "TEMPORARY", "INVOICING", "EXPRESS", "SCO", "WEBSHOP", "MISC", "KORONA_POS_NEXT"])
       unless validator.valid?(type)
         fail ArgumentError, "invalid value for \"type\", must be one of #{validator.allowable_values}."
       end
