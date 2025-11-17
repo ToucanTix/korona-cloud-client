@@ -104,7 +104,7 @@ module KoronaCloudClient
     # @return true if the model is valid
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
-      package_type_validator = EnumAttributeValidator.new('String', ["FOOD", "FRANCHISE", "INTEGRATION", "INVOICING", "PLUS", "RETAIL", "SUPPORT", "TICKET", "VOUCHER", "TSS_BACKUP", "POS", "POS_10", "FISKALY_TSS", "AI"])
+      package_type_validator = EnumAttributeValidator.new('String', ["FOOD", "FRANCHISE", "INTEGRATION", "INVOICING", "PLUS", "RETAIL", "SUPPORT", "TICKET", "VOUCHER", "TSS_BACKUP", "POS", "POS_10", "FISKALY_TSS", "AI", "SELF_SERVICE"])
       return false unless package_type_validator.valid?(@package_type)
       true
     end
@@ -112,9 +112,9 @@ module KoronaCloudClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] package_type Object to be assigned
     def package_type=(package_type)
-      validator = EnumAttributeValidator.new('String', ["FOOD", "FRANCHISE", "INTEGRATION", "INVOICING", "PLUS", "RETAIL", "SUPPORT", "TICKET", "VOUCHER", "TSS_BACKUP", "POS", "POS_10", "FISKALY_TSS", "AI"])
+      validator = EnumAttributeValidator.new('String', ["FOOD", "FRANCHISE", "INTEGRATION", "INVOICING", "PLUS", "RETAIL", "SUPPORT", "TICKET", "VOUCHER", "TSS_BACKUP", "POS", "POS_10", "FISKALY_TSS", "AI", "SELF_SERVICE"])
       unless validator.valid?(package_type)
-        fail ArgumentError, "invalid value for \"package_type\", must be one of #{validator.allowable_values}."
+        fail ArgumentError, "invalid value #{package_type} for \"package_type\", must be one of #{validator.allowable_values}."
       end
       @package_type = package_type
     end
