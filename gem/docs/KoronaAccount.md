@@ -8,8 +8,8 @@
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
 | **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
 | **number** | **String** | number of the object, like it is set in backoffice | [optional] |
-| **active_package_details** | **Object** |  | [optional] |
-| **active_packages** | **Object** |  | [optional] |
+| **active_package_details** | [**Array&lt;CloudSubscriptionDetails&gt;**](CloudSubscriptionDetails.md) | Active package details. | [optional] |
+| **active_packages** | **Array&lt;String&gt;** | Active packages. | [optional] |
 | **address** | [**AddressInformation**](AddressInformation.md) |  | [optional] |
 | **cloud_subscription** | [**CloudSubscription**](CloudSubscription.md) |  | [optional] |
 | **company** | **String** | Company. | [optional] |

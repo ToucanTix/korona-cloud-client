@@ -20,7 +20,7 @@ All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 ## add_stock_order_items
 
-> Object add_stock_order_items(korona_account_id, stock_order_id, stock_order_item)
+> <Array<AddOrUpdateResult>> add_stock_order_items(korona_account_id, stock_order_id, stock_order_item)
 
 
 
@@ -56,7 +56,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> add_stock_order_items_with_http_info(korona_account_id, stock_order_id, stock_order_item)
+> <Array(<Array<AddOrUpdateResult>>, Integer, Hash)> add_stock_order_items_with_http_info(korona_account_id, stock_order_id, stock_order_item)
 
 ```ruby
 begin
@@ -64,7 +64,7 @@ begin
   data, status_code, headers = api_instance.add_stock_order_items_with_http_info(korona_account_id, stock_order_id, stock_order_item)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <Array<AddOrUpdateResult>>
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling StockOrdersApi->add_stock_order_items_with_http_info: #{e}"
 end
@@ -80,7 +80,7 @@ end
 
 ### Return type
 
-**Object**
+[**Array&lt;AddOrUpdateResult&gt;**](AddOrUpdateResult.md)
 
 ### Authorization
 
@@ -94,7 +94,7 @@ end
 
 ## add_stock_orders
 
-> Object add_stock_orders(korona_account_id, stock_order)
+> <Array<AddOrUpdateResult>> add_stock_orders(korona_account_id, stock_order)
 
 
 
@@ -129,7 +129,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> add_stock_orders_with_http_info(korona_account_id, stock_order)
+> <Array(<Array<AddOrUpdateResult>>, Integer, Hash)> add_stock_orders_with_http_info(korona_account_id, stock_order)
 
 ```ruby
 begin
@@ -137,7 +137,7 @@ begin
   data, status_code, headers = api_instance.add_stock_orders_with_http_info(korona_account_id, stock_order)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <Array<AddOrUpdateResult>>
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling StockOrdersApi->add_stock_orders_with_http_info: #{e}"
 end
@@ -152,7 +152,7 @@ end
 
 ### Return type
 
-**Object**
+[**Array&lt;AddOrUpdateResult&gt;**](AddOrUpdateResult.md)
 
 ### Authorization
 
@@ -865,7 +865,7 @@ nil (empty response body)
 
 ## update_stock_order_items
 
-> Object update_stock_order_items(korona_account_id, stock_order_id, stock_order_item)
+> <Array<AddOrUpdateResult>> update_stock_order_items(korona_account_id, stock_order_id, stock_order_item)
 
 
 
@@ -901,7 +901,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> update_stock_order_items_with_http_info(korona_account_id, stock_order_id, stock_order_item)
+> <Array(<Array<AddOrUpdateResult>>, Integer, Hash)> update_stock_order_items_with_http_info(korona_account_id, stock_order_id, stock_order_item)
 
 ```ruby
 begin
@@ -909,7 +909,7 @@ begin
   data, status_code, headers = api_instance.update_stock_order_items_with_http_info(korona_account_id, stock_order_id, stock_order_item)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <Array<AddOrUpdateResult>>
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling StockOrdersApi->update_stock_order_items_with_http_info: #{e}"
 end
@@ -925,7 +925,7 @@ end
 
 ### Return type
 
-**Object**
+[**Array&lt;AddOrUpdateResult&gt;**](AddOrUpdateResult.md)
 
 ### Authorization
 

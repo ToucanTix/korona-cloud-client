@@ -6,9 +6,14 @@ Based on the OpenAPI definition at https://128.koronacloud.com/web/api/v3/openap
 
 # Generate the gem with OpenAPI Generator
 
-The generator version is pinned in `openapitools.json`. The published KORONA
-schema currently contains unrelated DSFinV-K path-parameter validation errors,
-so generation requires `--skip-validate-spec`.
+The generator version is pinned in `openapitools.json`. Generation uses a
+temporary OpenAPI 3.0.3 marker because the pinned generator cannot parse the
+3.1 document marker, while the KORONA schema does not use 3.1-only type or
+nullable syntax. Keeping generator 7.0.1 preserves compatibility with older
+KORONA hosts that omit schema-required collection fields in empty responses.
+
+The published schema also contains unrelated DSFinV-K path-parameter validation
+errors, so the generation script uses `--skip-validate-spec`.
 
 ### 1. Refresh the checked-in API definition
 
@@ -19,24 +24,8 @@ curl -fsSL https://128.koronacloud.com/web/api/v3/openapi.json -o swagger.json
 ### 2. Generate the gem code
 
 ```bash
-npx @openapitools/openapi-generator-cli generate --skip-validate-spec \
-  -i swagger.json \
-  -g ruby \
-  -o gem \
-  --package-name korona-cloud-client \
-  -p gemName=korona-cloud-client \
-  -p gemVersion=1.0.17 \
-  -p gemHomepage=https://github.com/giantmonkey/korona-cloud-client
+GEM_VERSION=1.0.17 scripts/generate
 ```
-
-## The homebrew way (tm) (deprecated)
-update the gem version before running this:
-```
-brew install openapi-generator
-openapi-generator generate --skip-validate-spec -i swagger.json -g ruby -o gem --package-name korona-cloud-client \
--p gemName=korona-cloud-client -p gemHomepage=https://github.com/giantmonkey/korona-cloud-client -p gemVersion=1.0.17
-```
-(all ruby options:  [https://openapi-generator.tech/docs/generators/ruby/](https://openapi-generator.tech/docs/generators/ruby/) )
 
 # Publish gem to rubygems
 ## fix the overlong file path for a spec file and build gem

@@ -16,7 +16,7 @@ All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 ## add_dsfinvk_exports
 
-> Object add_dsfinvk_exports(dsfinvk_export)
+> <Array<AddOrUpdateResult>> add_dsfinvk_exports(dsfinvk_export)
 
 
 
@@ -50,7 +50,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> add_dsfinvk_exports_with_http_info(dsfinvk_export)
+> <Array(<Array<AddOrUpdateResult>>, Integer, Hash)> add_dsfinvk_exports_with_http_info(dsfinvk_export)
 
 ```ruby
 begin
@@ -58,7 +58,7 @@ begin
   data, status_code, headers = api_instance.add_dsfinvk_exports_with_http_info(dsfinvk_export)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <Array<AddOrUpdateResult>>
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling KoronaAccountApi->add_dsfinvk_exports_with_http_info: #{e}"
 end
@@ -72,7 +72,7 @@ end
 
 ### Return type
 
-**Object**
+[**Array&lt;AddOrUpdateResult&gt;**](AddOrUpdateResult.md)
 
 ### Authorization
 

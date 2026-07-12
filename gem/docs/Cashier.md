@@ -51,8 +51,8 @@ instance = KoronaCloudClient::Cashier.new(
   background_color: null,
   organizational_units: null,
   cashier_role: null,
-  create_time: 2018-11-22,
-  last_receipt_time: 2018-11-22,
+  create_time: Thu Nov 22 01:00:00 CET 2018,
+  last_receipt_time: Thu Nov 22 01:00:00 CET 2018,
   organizational_unit_specific_numbers: null,
   organizational_unit_roles: null
 )

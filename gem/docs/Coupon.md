@@ -11,7 +11,7 @@
 | **promotion** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **redemption_count** | **Integer** | Redemption count. | [optional] |
 | **creation_time** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
-| **external** | **Object** |  | [optional] |
+| **external** | **Object** | If true, external. | [optional] |
 
 ## Example
 

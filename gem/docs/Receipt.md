@@ -8,8 +8,8 @@
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
 | **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
 | **number** | **String** | number of the object, like it is set in backoffice | [optional] |
-| **account_transactions** | **Object** |  | [optional] |
-| **additional_info** | **Object** |  | [optional] |
+| **account_transactions** | [**Array&lt;AccountTransaction&gt;**](AccountTransaction.md) | Account transactions. | [optional] |
+| **additional_info** | [**Array&lt;AdditionalInfo&gt;**](AdditionalInfo.md) | Additional info. | [optional] |
 | **booking_time** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 | **cancelled** | **Boolean** | If true, cancelled. | [optional] |
 | **cashier** | [**ModelReference**](ModelReference.md) |  | [optional] |

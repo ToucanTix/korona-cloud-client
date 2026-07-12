@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **start** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 | **_end** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
-| **results** | **Object** |  | [optional] |
+| **results** | [**Array&lt;StatisticTopSeller&gt;**](StatisticTopSeller.md) | Results. | [optional] |
 
 ## Example
 

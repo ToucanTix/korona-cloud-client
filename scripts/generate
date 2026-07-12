@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+repo_root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+gem_version=${GEM_VERSION:-1.0.17}
+work_dir=$(mktemp -d "${TMPDIR:-/tmp}/korona-cloud-client.XXXXXX")
+
+cleanup() {
+  rm -rf "$work_dir"
+}
+trap cleanup EXIT
+
+# Generator 7.0.1 cannot parse the 3.1 document marker. The published schema
+# does not currently use 3.1-only type arrays or nullable syntax, so normalize
+# only the marker in the temporary generation input and retain the raw source.
+jq '.openapi = "3.0.3"' "$repo_root/swagger.json" > "$work_dir/openapi.json"
+
+npx @openapitools/openapi-generator-cli generate \
+  --skip-validate-spec \
+  -i "$work_dir/openapi.json" \
+  -g ruby \
+  -o "$work_dir/gem" \
+  --package-name korona-cloud-client \
+  -p gemName=korona-cloud-client \
+  -p gemVersion="$gem_version" \
+  -p gemHomepage=https://github.com/giantmonkey/korona-cloud-client
+
+rsync -a --delete \
+  --exclude='.DS_Store' \
+  --exclude='spec/models/customer_buyer_reference_spec.rb' \
+  "$work_dir/gem/" "$repo_root/gem/"
+
+while IFS= read -r file; do
+  LC_ALL=C perl -pi -e 's/[ \t]+$//' "$file"
+done < <(rg -l '[[:blank:]]+$' "$repo_root/gem" \
+  -g '*.rb' -g '*.md' -g '*.yml' -g '*.yaml' -g '*.gemspec' || true)

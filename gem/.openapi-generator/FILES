@@ -512,7 +512,6 @@ lib/korona-cloud-client/api/voucher_transactions_api.rb
 lib/korona-cloud-client/api/vouchers_api.rb
 lib/korona-cloud-client/api_client.rb
 lib/korona-cloud-client/api_error.rb
-lib/korona-cloud-client/api_model_base.rb
 lib/korona-cloud-client/configuration.rb
 lib/korona-cloud-client/models/account.rb
 lib/korona-cloud-client/models/account_max_revisions.rb
@@ -945,6 +944,8 @@ spec/api/users_api_spec.rb
 spec/api/voucher_configurations_api_spec.rb
 spec/api/voucher_transactions_api_spec.rb
 spec/api/vouchers_api_spec.rb
+spec/api_client_spec.rb
+spec/configuration_spec.rb
 spec/models/account_max_revisions_spec.rb
 spec/models/account_spec.rb
 spec/models/account_summary_spec.rb
