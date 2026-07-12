@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **current** | **Integer** |  | [optional] |
-| **limit** | **Integer** |  | [optional] |
+| **current** | **Integer** | Current usage value. | [optional] |
+| **limit** | **Integer** | Maximum allowed usage value. | [optional] |
 
 ## Example
 

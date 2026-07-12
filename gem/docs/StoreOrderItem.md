@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **product** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **quantity** | **Float** |  | [optional] |
+| **quantity** | **Float** | Ordered quantity of the product. | [optional] |
 | **supplier** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **source_organizational_unit** | [**ModelReference**](ModelReference.md) |  | [optional] |
 

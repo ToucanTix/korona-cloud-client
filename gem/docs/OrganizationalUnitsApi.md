@@ -1,6 +1,6 @@
 # KoronaCloudClient::OrganizationalUnitsApi
 
-All URIs are relative to *http://localhost:8080/web/api/v3*
+All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -13,7 +13,8 @@ All URIs are relative to *http://localhost:8080/web/api/v3*
 | [**get_organizational_unit_day_rating**](OrganizationalUnitsApi.md#get_organizational_unit_day_rating) | **GET** /accounts/{koronaAccountId}/organizationalUnits/{organizationalUnitId}/dayRatings/{dayRatingIdOrDate} |  |
 | [**get_organizational_unit_day_ratings**](OrganizationalUnitsApi.md#get_organizational_unit_day_ratings) | **GET** /accounts/{koronaAccountId}/organizationalUnits/{organizationalUnitId}/dayRatings |  |
 | [**get_organizational_unit_inventory_lists**](OrganizationalUnitsApi.md#get_organizational_unit_inventory_lists) | **GET** /accounts/{koronaAccountId}/organizationalUnits/{organizationalUnitId}/inventoryLists |  |
-| [**get_organizational_unit_product_stocks**](OrganizationalUnitsApi.md#get_organizational_unit_product_stocks) | **GET** /accounts/{koronaAccountId}/organizationalUnits/{organizationalUnitId}/productStocks |  |
+| [**get_organizational_unit_product_stocks**](OrganizationalUnitsApi.md#get_organizational_unit_product_stocks) | **POST** /accounts/{koronaAccountId}/organizationalUnits/{organizationalUnitId}/productStocks |  |
+| [**get_organizational_unit_product_stocks1**](OrganizationalUnitsApi.md#get_organizational_unit_product_stocks1) | **GET** /accounts/{koronaAccountId}/organizationalUnits/{organizationalUnitId}/productStocks |  |
 | [**get_organizational_unit_stock_receipts**](OrganizationalUnitsApi.md#get_organizational_unit_stock_receipts) | **GET** /accounts/{koronaAccountId}/organizationalUnits/{organizationalUnitId}/stockReceipts |  |
 | [**get_organizational_units**](OrganizationalUnitsApi.md#get_organizational_units) | **GET** /accounts/{koronaAccountId}/organizationalUnits |  |
 | [**update_organizational_unit**](OrganizationalUnitsApi.md#update_organizational_unit) | **PATCH** /accounts/{koronaAccountId}/organizationalUnits/{organizationalUnitId} |  |
@@ -43,12 +44,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 day_rating = [KoronaCloudClient::DayRating.new] # Array<DayRating> | an array of new day ratings
 
 begin
-  
+
   result = api_instance.add_organizational_unit_day_ratings(korona_account_id, organizational_unit_id, day_rating)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -64,7 +65,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_organizational_unit_day_ratings_with_http_info(korona_account_id, organizational_unit_id, day_rating)
   p status_code # => 2xx
   p headers # => { ... }
@@ -78,7 +79,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **day_rating** | [**Array&lt;DayRating&gt;**](DayRating.md) | an array of new day ratings |  |
 
@@ -117,7 +118,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit = [KoronaCloudClient::OrganizationalUnit.new({name: 'name_example'})] # Array<OrganizationalUnit> | an array of new organizational units
 opts = {
   upsert: true, # Boolean | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead
@@ -125,7 +126,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.add_organizational_units(korona_account_id, organizational_unit, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -141,7 +142,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_organizational_units_with_http_info(korona_account_id, organizational_unit, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -155,7 +156,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit** | [**Array&lt;OrganizationalUnit&gt;**](OrganizationalUnit.md) | an array of new organizational units |  |
 | **upsert** | **Boolean** | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead | [optional] |
 | **write_mode** | **String** | DEFAULT &#x3D; insert; ADD_OR_UPDATE &#x3D; insert or update, overwrite all non-null fields; ADD_OR_REPLACE &#x3D; insert or update, overwrite all fields | [optional] |
@@ -195,11 +196,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.delete_organizational_unit(korona_account_id, organizational_unit_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling OrganizationalUnitsApi->delete_organizational_unit: #{e}"
@@ -214,7 +215,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_organizational_unit_with_http_info(korona_account_id, organizational_unit_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -228,7 +229,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -266,12 +267,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 day_rating_id_or_date = 'day_rating_id_or_date_example' # String | the id or date (YYYY-MM-DD) of the day rating
 
 begin
-  
+
   api_instance.delete_organizational_unit_day_rating(korona_account_id, organizational_unit_id, day_rating_id_or_date)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling OrganizationalUnitsApi->delete_organizational_unit_day_rating: #{e}"
@@ -286,7 +287,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_organizational_unit_day_rating_with_http_info(korona_account_id, organizational_unit_id, day_rating_id_or_date)
   p status_code # => 2xx
   p headers # => { ... }
@@ -300,7 +301,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **day_rating_id_or_date** | **String** | the id or date (YYYY-MM-DD) of the day rating |  |
 
@@ -339,11 +340,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit = [KoronaCloudClient::OrganizationalUnit.new({name: 'name_example'})] # Array<OrganizationalUnit> | array of existing organizational units (id or number required)
 
 begin
-  
+
   result = api_instance.delete_organizational_units(korona_account_id, organizational_unit)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -359,7 +360,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_organizational_units_with_http_info(korona_account_id, organizational_unit)
   p status_code # => 2xx
   p headers # => { ... }
@@ -373,7 +374,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit** | [**Array&lt;OrganizationalUnit&gt;**](OrganizationalUnit.md) | array of existing organizational units (id or number required) |  |
 
 ### Return type
@@ -411,11 +412,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_organizational_unit(korona_account_id, organizational_unit_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -431,7 +432,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_organizational_unit_with_http_info(korona_account_id, organizational_unit_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -445,7 +446,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -483,12 +484,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 day_rating_id_or_date = 'day_rating_id_or_date_example' # String | the id or date (YYYY-MM-DD) of the day rating
 
 begin
-  
+
   result = api_instance.get_organizational_unit_day_rating(korona_account_id, organizational_unit_id, day_rating_id_or_date)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -504,7 +505,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_organizational_unit_day_rating_with_http_info(korona_account_id, organizational_unit_id, day_rating_id_or_date)
   p status_code # => 2xx
   p headers # => { ... }
@@ -518,7 +519,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **day_rating_id_or_date** | **String** | the id or date (YYYY-MM-DD) of the day rating |  |
 
@@ -557,7 +558,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
   page: 56, # Integer | number of the page to fetch
@@ -566,7 +567,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_organizational_unit_day_ratings(korona_account_id, organizational_unit_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -582,7 +583,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_organizational_unit_day_ratings_with_http_info(korona_account_id, organizational_unit_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -596,7 +597,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
@@ -622,7 +623,7 @@ end
 
 
 
-lists the inventory lists belonging to the organizational unit (KORONA.retail required)
+lists the inventory lists belonging to the organizational unit (KORONA Retail required)
 
 ### Examples
 
@@ -637,7 +638,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
   page: 56, # Integer | number of the page to fetch
@@ -653,7 +654,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_organizational_unit_inventory_lists(korona_account_id, organizational_unit_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -669,7 +670,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_organizational_unit_inventory_lists_with_http_info(korona_account_id, organizational_unit_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -683,7 +684,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
@@ -716,7 +717,7 @@ end
 
 
 
-lists the product stocks of the organizational unit, in case it contains a warehouse (KORONA.retail required)
+lists the product stocks of the organizational unit (KORONA Retail required)
 
 ### Examples
 
@@ -731,17 +732,15 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
-  page: 56, # Integer | number of the page to fetch
-  size: 56, # Integer | amount of objects to return per page
-  sort: 'sort_example', # String | attribute to sort by (multiple separated by comma; max. 5)
-  revision: 789 # Integer | last revision number, objects with a greater revision than this will be returned
+  revision: 789, # Integer | last revision number, objects with a greater revision than this will be returned
+  model_reference: [KoronaCloudClient::ModelReference.new] # Array<ModelReference> | product data to filter
 }
 
 begin
-  
+
   result = api_instance.get_organizational_unit_product_stocks(korona_account_id, organizational_unit_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -757,7 +756,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_organizational_unit_product_stocks_with_http_info(korona_account_id, organizational_unit_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -771,7 +770,87 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
+| **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
+| **revision** | **Integer** | last revision number, objects with a greater revision than this will be returned | [optional] |
+| **model_reference** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | product data to filter | [optional] |
+
+### Return type
+
+[**ResultListProductStock**](ResultListProductStock.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## get_organizational_unit_product_stocks1
+
+> <ResultListProductStock> get_organizational_unit_product_stocks1(korona_account_id, organizational_unit_id, opts)
+
+
+
+lists the product stocks of the organizational unit, in case it contains a warehouse (KORONA Retail required)
+
+### Examples
+
+```ruby
+require 'time'
+require 'korona-cloud-client'
+# setup authorization
+KoronaCloudClient.configure do |config|
+  # Configure HTTP basic authorization: basicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
+organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
+opts = {
+  page: 56, # Integer | number of the page to fetch
+  size: 56, # Integer | amount of objects to return per page
+  sort: 'sort_example', # String | attribute to sort by (multiple separated by comma; max. 5)
+  revision: 789 # Integer | last revision number, objects with a greater revision than this will be returned
+}
+
+begin
+
+  result = api_instance.get_organizational_unit_product_stocks1(korona_account_id, organizational_unit_id, opts)
+  p result
+rescue KoronaCloudClient::ApiError => e
+  puts "Error when calling OrganizationalUnitsApi->get_organizational_unit_product_stocks1: #{e}"
+end
+```
+
+#### Using the get_organizational_unit_product_stocks1_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ResultListProductStock>, Integer, Hash)> get_organizational_unit_product_stocks1_with_http_info(korona_account_id, organizational_unit_id, opts)
+
+```ruby
+begin
+
+  data, status_code, headers = api_instance.get_organizational_unit_product_stocks1_with_http_info(korona_account_id, organizational_unit_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ResultListProductStock>
+rescue KoronaCloudClient::ApiError => e
+  puts "Error when calling OrganizationalUnitsApi->get_organizational_unit_product_stocks1_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
@@ -798,7 +877,7 @@ end
 
 
 
-lists the stock receipts belonging to the organizational unit (KORONA.retail required)
+lists the stock receipts belonging to the organizational unit (KORONA Retail required)
 
 ### Examples
 
@@ -813,7 +892,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
   page: 56, # Integer | number of the page to fetch
@@ -831,7 +910,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_organizational_unit_stock_receipts(korona_account_id, organizational_unit_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -847,7 +926,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_organizational_unit_stock_receipts_with_http_info(korona_account_id, organizational_unit_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -861,7 +940,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
@@ -911,7 +990,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
@@ -922,7 +1001,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_organizational_units(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -938,7 +1017,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_organizational_units_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -952,7 +1031,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |
@@ -980,7 +1059,7 @@ end
 
 
 
-updates the organizational unit 
+updates the organizational unit
 
 ### Examples
 
@@ -995,12 +1074,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 organizational_unit = KoronaCloudClient::OrganizationalUnit.new({name: 'name_example'}) # OrganizationalUnit | the properties to update of the organizational unit
 
 begin
-  
+
   api_instance.update_organizational_unit(korona_account_id, organizational_unit_id, organizational_unit)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling OrganizationalUnitsApi->update_organizational_unit: #{e}"
@@ -1015,7 +1094,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_organizational_unit_with_http_info(korona_account_id, organizational_unit_id, organizational_unit)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1029,7 +1108,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **organizational_unit** | [**OrganizationalUnit**](OrganizationalUnit.md) | the properties to update of the organizational unit |  |
 
@@ -1068,13 +1147,13 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 day_rating_id_or_date = 'day_rating_id_or_date_example' # String | the id or date (YYYY-MM-DD) of the day rating
 day_rating = KoronaCloudClient::DayRating.new # DayRating | the properties to update of the day rating
 
 begin
-  
+
   api_instance.update_organizational_unit_day_rating(korona_account_id, organizational_unit_id, day_rating_id_or_date, day_rating)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling OrganizationalUnitsApi->update_organizational_unit_day_rating: #{e}"
@@ -1089,7 +1168,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_organizational_unit_day_rating_with_http_info(korona_account_id, organizational_unit_id, day_rating_id_or_date, day_rating)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1103,7 +1182,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **day_rating_id_or_date** | **String** | the id or date (YYYY-MM-DD) of the day rating |  |
 | **day_rating** | [**DayRating**](DayRating.md) | the properties to update of the day rating |  |
@@ -1143,12 +1222,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit_id = 'organizational_unit_id_example' # String | id of the related object (important: id should match the uuid-format)
 day_rating = [KoronaCloudClient::DayRating.new] # Array<DayRating> | an array of new day ratings
 
 begin
-  
+
   result = api_instance.update_organizational_unit_day_ratings(korona_account_id, organizational_unit_id, day_rating)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -1164,7 +1243,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_organizational_unit_day_ratings_with_http_info(korona_account_id, organizational_unit_id, day_rating)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1178,7 +1257,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **day_rating** | [**Array&lt;DayRating&gt;**](DayRating.md) | an array of new day ratings |  |
 
@@ -1217,11 +1296,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::OrganizationalUnitsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 organizational_unit = [KoronaCloudClient::OrganizationalUnit.new({name: 'name_example'})] # Array<OrganizationalUnit> | an array of existing organizational units
 
 begin
-  
+
   result = api_instance.update_organizational_units(korona_account_id, organizational_unit)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -1237,7 +1316,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_organizational_units_with_http_info(korona_account_id, organizational_unit)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1251,7 +1330,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **organizational_unit** | [**Array&lt;OrganizationalUnit&gt;**](OrganizationalUnit.md) | an array of existing organizational units |  |
 
 ### Return type

@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **date_interval** | [**DateInterval**](DateInterval.md) |  | [optional] |
 | **days_after_purchase_interval** | [**PromotionCouponValidityDaysAfterPurchaseInterval**](PromotionCouponValidityDaysAfterPurchaseInterval.md) |  | [optional] |
-| **type** | **String** |  | [optional] |
+| **type** | **String** | Provider type of the linked payment service integration. | [optional] |
 
 ## Example
 

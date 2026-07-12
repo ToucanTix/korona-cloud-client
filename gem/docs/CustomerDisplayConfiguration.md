@@ -6,24 +6,27 @@
 | ---- | ---- | ----------- | ----- |
 | **active** | **Boolean** | indicates whether the object is active for use or not | [optional][readonly] |
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
-| **revision** | **Integer** | the revision number of the object. revision numbers are unique per object-type. there is is no object of the same type with identical revision numbers. | [optional][readonly] |
-| **number** | **String** | number of the object, like it is set in backoffice; will be removed when active&#x3D;false | [optional] |
-| **font_scale** | **Integer** |  | [optional] |
-| **name** | **String** |  | [optional] |
-| **booking_url** | **String** |  | [optional] |
+| **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
+| **number** | **String** | number of the object, like it is set in backoffice | [optional] |
+| **font_scale** | **Integer** | Font scale. | [optional] |
+| **name** | **String** | Display name. | [optional] |
+| **booking_url** | **String** | Booking url. | [optional] |
 | **booking_image** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **booking_image_id** | **String** |  | [optional] |
-| **closed_url** | **String** |  | [optional] |
-| **closed_text** | **String** |  | [optional] |
+| **booking_image_id** | **String** | Booking image identifier. | [optional] |
+| **closed_url** | **String** | Closed url. | [optional] |
+| **closed_text** | **String** | Closed text. | [optional] |
 | **closed_image** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **closed_image_id** | **String** |  | [optional] |
-| **welcome_text** | **String** |  | [optional] |
-| **welcome_url** | **String** |  | [optional] |
+| **closed_image_id** | **String** | Closed image identifier. | [optional] |
+| **welcome_text** | **String** | Welcome text. | [optional] |
+| **welcome_url** | **String** | Welcome url. | [optional] |
 | **welcome_image** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **welcome_image_id** | **String** |  | [optional] |
-| **graphical_display** | **String** |  | [optional] |
-| **layout_type** | **String** |  | [optional] |
-| **theme_color** | **String** |  | [optional] |
+| **welcome_image_id** | **String** | Welcome image identifier. | [optional] |
+| **graphical_display** | **String** | Graphical display. | [optional] |
+| **layout_type** | **String** | Layout type. | [optional] |
+| **welcome_layout_type** | **String** | Welcome layout type. | [optional] |
+| **closed_layout_type** | **String** | Closed layout type. | [optional] |
+| **booking_layout_type** | **String** | Booking layout type. | [optional] |
+| **theme_color** | **String** | Theme color. | [optional] |
 
 ## Example
 
@@ -50,6 +53,9 @@ instance = KoronaCloudClient::CustomerDisplayConfiguration.new(
   welcome_image_id: null,
   graphical_display: null,
   layout_type: null,
+  welcome_layout_type: null,
+  closed_layout_type: null,
+  booking_layout_type: null,
   theme_color: null
 )
 ```

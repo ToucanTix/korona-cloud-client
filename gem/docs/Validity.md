@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **daily** | [**DayTimePeriod**](DayTimePeriod.md) |  | [optional] |
-| **days_of_month** | **Array&lt;Integer&gt;** |  | [optional] |
-| **days_of_week** | **Array&lt;String&gt;** |  | [optional] |
+| **days_of_month** | **Array&lt;Integer&gt;** | Days of month. | [optional] |
+| **days_of_week** | **Array&lt;String&gt;** | Days of week. | [optional] |
 | **total** | [**TotalPeriod**](TotalPeriod.md) |  | [optional] |
 
 ## Example

@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **bonuspoints** | **Integer** |  | [optional] |
+| **bonuspoints** | **Integer** | Bonuspoints. | [optional] |
 | **tag** | [**ModelReference**](ModelReference.md) |  | [optional] |
 
 ## Example

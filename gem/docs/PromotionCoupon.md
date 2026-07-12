@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code_type** | **String** |  | [optional] |
-| **organizational_units** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **text** | **String** |  | [optional] |
+| **code_type** | **String** | Code type. | [optional] |
+| **organizational_units** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the organizational units associated with this resource. | [optional] |
+| **text** | **String** | Text. | [optional] |
 | **validity** | [**PromotionCouponValidity**](PromotionCouponValidity.md) |  | [optional] |
 
 ## Example

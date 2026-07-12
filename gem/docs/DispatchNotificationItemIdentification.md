@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **buyer** | **String** |  | [optional] |
-| **product_code** | **String** |  | [optional] |
-| **supplier** | **String** |  | [optional] |
+| **buyer** | **String** | Buyer. | [optional] |
+| **product_code** | **String** | Product code. | [optional] |
+| **supplier** | **String** | Supplier. | [optional] |
 
 ## Example
 

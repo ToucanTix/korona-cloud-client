@@ -1,32 +1,40 @@
-# gemifiied KORONA.cloud API client
+# Gemified KORONA.cloud API client
 
 [![Gem Version](https://badge.fury.io/rb/korona-cloud-client.svg)](https://badge.fury.io/rb/korona-cloud-client)
 
-Based on OpenAPI definition file https://128.koronacloud.com/web/api/v3/swagger.json
+Based on the OpenAPI definition at https://128.koronacloud.com/web/api/v3/openapi.json.
 
-# Generate gem with openapi-generator (was swagger-codegen)
-## The openapi-generator-cli way (tm)
-### 1. install the generator
+# Generate the gem with OpenAPI Generator
+
+The generator version is pinned in `openapitools.json`. The published KORONA
+schema currently contains unrelated DSFinV-K path-parameter validation errors,
+so generation requires `--skip-validate-spec`.
+
+### 1. Refresh the checked-in API definition
+
+```bash
+curl -fsSL https://128.koronacloud.com/web/api/v3/openapi.json -o swagger.json
 ```
-npm install @openapitools/openapi-generator-cli -g
-```
-### 2. select version (optional)
-```
-openapi-generator-cli version-manager list
-```
-### 3. generate the gem code
-```
-npx @openapitools/openapi-generator-cli generate -i swagger.json -g ruby -o gem \
---package-name korona-cloud-client -p gemName=korona-cloud-client -p gemVersion=1.0.13 \
--p gemHomepage=https://github.com/giantmonkey/korona-cloud-client
+
+### 2. Generate the gem code
+
+```bash
+npx @openapitools/openapi-generator-cli generate --skip-validate-spec \
+  -i swagger.json \
+  -g ruby \
+  -o gem \
+  --package-name korona-cloud-client \
+  -p gemName=korona-cloud-client \
+  -p gemVersion=1.0.17 \
+  -p gemHomepage=https://github.com/giantmonkey/korona-cloud-client
 ```
 
 ## The homebrew way (tm) (deprecated)
 update the gem version before running this:
 ```
 brew install openapi-generator
-openapi-generator generate -i swagger.json -g ruby -o gem --package-name korona-cloud-client \
--p gemName=korona-cloud-client -p gemHomepage=https://github.com/giantmonkey/korona-cloud-client -p gemVersion=1.0.13
+openapi-generator generate --skip-validate-spec -i swagger.json -g ruby -o gem --package-name korona-cloud-client \
+-p gemName=korona-cloud-client -p gemHomepage=https://github.com/giantmonkey/korona-cloud-client -p gemVersion=1.0.17
 ```
 (all ruby options:  [https://openapi-generator.tech/docs/generators/ruby/](https://openapi-generator.tech/docs/generators/ruby/) )
 
@@ -39,7 +47,7 @@ gem build korona-cloud-client.gemspec
 ```
 ## push to rubygems
 ```bash
-gem push korona-cloud-client-1.0.10.gem
+gem push korona-cloud-client-1.0.17.gem
 ```
 
 # usage in a project

@@ -1,6 +1,6 @@
 # KoronaCloudClient::StockReceiptsApi
 
-All URIs are relative to *http://localhost:8080/web/api/v3*
+All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -38,12 +38,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 stock_receipt_item = [KoronaCloudClient::StockReceiptItem.new] # Array<StockReceiptItem> | data to add
 
 begin
-  
+
   result = api_instance.add_stock_receipt_items(korona_account_id, stock_receipt_id, stock_receipt_item)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -59,7 +59,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_stock_receipt_items_with_http_info(korona_account_id, stock_receipt_id, stock_receipt_item)
   p status_code # => 2xx
   p headers # => { ... }
@@ -73,7 +73,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **stock_receipt_item** | [**Array&lt;StockReceiptItem&gt;**](StockReceiptItem.md) | data to add |  |
 
@@ -112,11 +112,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt = [KoronaCloudClient::StockReceipt.new] # Array<StockReceipt> | data to add
 
 begin
-  
+
   result = api_instance.add_stock_receipts(korona_account_id, stock_receipt)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -132,7 +132,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_stock_receipts_with_http_info(korona_account_id, stock_receipt)
   p status_code # => 2xx
   p headers # => { ... }
@@ -146,7 +146,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt** | [**Array&lt;StockReceipt&gt;**](StockReceipt.md) | data to add |  |
 
 ### Return type
@@ -184,11 +184,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.book_stock_receipt(korona_account_id, stock_receipt_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling StockReceiptsApi->book_stock_receipt: #{e}"
@@ -203,7 +203,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.book_stock_receipt_with_http_info(korona_account_id, stock_receipt_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -217,7 +217,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -255,12 +255,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 product_id = 'product_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.delete_stock_receipt_item(korona_account_id, stock_receipt_id, product_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling StockReceiptsApi->delete_stock_receipt_item: #{e}"
@@ -275,7 +275,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_stock_receipt_item_with_http_info(korona_account_id, stock_receipt_id, product_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -289,7 +289,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **product_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
@@ -328,11 +328,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_stock_receipt(korona_account_id, stock_receipt_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -348,7 +348,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_stock_receipt_with_http_info(korona_account_id, stock_receipt_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -362,7 +362,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -400,12 +400,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 product_id = 'product_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_stock_receipt_item(korona_account_id, stock_receipt_id, product_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -421,7 +421,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_stock_receipt_item_with_http_info(korona_account_id, stock_receipt_id, product_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -435,7 +435,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **product_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
@@ -474,7 +474,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
   page: 56, # Integer | number of the page to fetch
@@ -484,7 +484,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_stock_receipt_items(korona_account_id, stock_receipt_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -500,7 +500,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_stock_receipt_items_with_http_info(korona_account_id, stock_receipt_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -514,7 +514,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
@@ -556,7 +556,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
@@ -574,7 +574,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_stock_receipts(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -590,7 +590,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_stock_receipts_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -604,7 +604,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |
@@ -654,12 +654,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 stock_receipt = KoronaCloudClient::StockReceipt.new # StockReceipt | data to update
 
 begin
-  
+
   api_instance.update_stock_receipt(korona_account_id, stock_receipt_id, stock_receipt)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling StockReceiptsApi->update_stock_receipt: #{e}"
@@ -674,7 +674,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_stock_receipt_with_http_info(korona_account_id, stock_receipt_id, stock_receipt)
   p status_code # => 2xx
   p headers # => { ... }
@@ -688,7 +688,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **stock_receipt** | [**StockReceipt**](StockReceipt.md) | data to update |  |
 
@@ -727,13 +727,13 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 product_id = 'product_id_example' # String | id of the related object (important: id should match the uuid-format)
 stock_receipt_item = KoronaCloudClient::StockReceiptItem.new # StockReceiptItem | data to update
 
 begin
-  
+
   api_instance.update_stock_receipt_item(korona_account_id, stock_receipt_id, product_id, stock_receipt_item)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling StockReceiptsApi->update_stock_receipt_item: #{e}"
@@ -748,7 +748,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_stock_receipt_item_with_http_info(korona_account_id, stock_receipt_id, product_id, stock_receipt_item)
   p status_code # => 2xx
   p headers # => { ... }
@@ -762,7 +762,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **product_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **stock_receipt_item** | [**StockReceiptItem**](StockReceiptItem.md) | data to update |  |
@@ -802,12 +802,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::StockReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 stock_receipt_id = 'stock_receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 stock_receipt_item = [KoronaCloudClient::StockReceiptItem.new] # Array<StockReceiptItem> | data to update
 
 begin
-  
+
   result = api_instance.update_stock_receipt_items(korona_account_id, stock_receipt_id, stock_receipt_item)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -823,7 +823,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_stock_receipt_items_with_http_info(korona_account_id, stock_receipt_id, stock_receipt_item)
   p status_code # => 2xx
   p headers # => { ... }
@@ -837,7 +837,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **stock_receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **stock_receipt_item** | [**Array&lt;StockReceiptItem&gt;**](StockReceiptItem.md) | data to update |  |
 

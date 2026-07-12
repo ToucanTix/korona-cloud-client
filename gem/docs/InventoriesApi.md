@@ -1,6 +1,6 @@
 # KoronaCloudClient::InventoriesApi
 
-All URIs are relative to *http://localhost:8080/web/api/v3*
+All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -42,11 +42,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory = [KoronaCloudClient::Inventory.new] # Array<Inventory> | an array of new inventories
 
 begin
-  
+
   result = api_instance.add_inventories(korona_account_id, inventory)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -62,7 +62,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_inventories_with_http_info(korona_account_id, inventory)
   p status_code # => 2xx
   p headers # => { ... }
@@ -76,7 +76,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory** | [**Array&lt;Inventory&gt;**](Inventory.md) | an array of new inventories |  |
 
 ### Return type
@@ -114,13 +114,13 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_item = [KoronaCloudClient::InventoryListItem.new] # Array<InventoryListItem> | data to update
 
 begin
-  
+
   result = api_instance.add_inventory_list_items(korona_account_id, inventory_id, inventory_list_id, inventory_list_item)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -136,7 +136,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_inventory_list_items_with_http_info(korona_account_id, inventory_id, inventory_list_id, inventory_list_item)
   p status_code # => 2xx
   p headers # => { ... }
@@ -150,7 +150,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_item** | [**Array&lt;InventoryListItem&gt;**](InventoryListItem.md) | data to update |  |
@@ -190,12 +190,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.book_inventory_list(korona_account_id, inventory_id, inventory_list_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling InventoriesApi->book_inventory_list: #{e}"
@@ -210,7 +210,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.book_inventory_list_with_http_info(korona_account_id, inventory_id, inventory_list_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -224,7 +224,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
@@ -263,11 +263,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.delete_inventory(korona_account_id, inventory_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling InventoriesApi->delete_inventory: #{e}"
@@ -282,7 +282,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_inventory_with_http_info(korona_account_id, inventory_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -296,7 +296,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -334,13 +334,13 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 product_id = 'product_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.delete_inventory_list_item(korona_account_id, inventory_id, inventory_list_id, product_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling InventoriesApi->delete_inventory_list_item: #{e}"
@@ -355,7 +355,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_inventory_list_item_with_http_info(korona_account_id, inventory_id, inventory_list_id, product_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -369,7 +369,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **product_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
@@ -409,7 +409,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
@@ -420,7 +420,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_inventories(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -436,7 +436,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_inventories_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -450,7 +450,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |
@@ -493,11 +493,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_inventory(korona_account_id, inventory_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -513,7 +513,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_inventory_with_http_info(korona_account_id, inventory_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -527,7 +527,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -565,12 +565,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_inventory_list(korona_account_id, inventory_id, inventory_list_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -586,7 +586,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_inventory_list_with_http_info(korona_account_id, inventory_id, inventory_list_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -600,7 +600,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
@@ -639,13 +639,13 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 product_id = 'product_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_inventory_list_item(korona_account_id, inventory_id, inventory_list_id, product_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -661,7 +661,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_inventory_list_item_with_http_info(korona_account_id, inventory_id, inventory_list_id, product_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -675,7 +675,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **product_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
@@ -715,7 +715,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
@@ -726,7 +726,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_inventory_list_items(korona_account_id, inventory_id, inventory_list_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -742,7 +742,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_inventory_list_items_with_http_info(korona_account_id, inventory_id, inventory_list_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -756,7 +756,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
@@ -799,7 +799,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
   page: 56, # Integer | number of the page to fetch
@@ -816,7 +816,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_inventory_lists(korona_account_id, inventory_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -832,7 +832,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_inventory_lists_with_http_info(korona_account_id, inventory_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -846,7 +846,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
@@ -895,12 +895,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory = KoronaCloudClient::Inventory.new # Inventory | the properties to update of the inventory
 
 begin
-  
+
   api_instance.update_inventory(korona_account_id, inventory_id, inventory)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling InventoriesApi->update_inventory: #{e}"
@@ -915,7 +915,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_inventory_with_http_info(korona_account_id, inventory_id, inventory)
   p status_code # => 2xx
   p headers # => { ... }
@@ -929,7 +929,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory** | [**Inventory**](Inventory.md) | the properties to update of the inventory |  |
 
@@ -968,13 +968,13 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list = KoronaCloudClient::InventoryList.new # InventoryList | data to update
 
 begin
-  
+
   api_instance.update_inventory_list(korona_account_id, inventory_id, inventory_list_id, inventory_list)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling InventoriesApi->update_inventory_list: #{e}"
@@ -989,7 +989,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_inventory_list_with_http_info(korona_account_id, inventory_id, inventory_list_id, inventory_list)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1003,7 +1003,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list** | [**InventoryList**](InventoryList.md) | data to update |  |
@@ -1043,14 +1043,14 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 product_id = 'product_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_item = KoronaCloudClient::InventoryListItem.new # InventoryListItem | data to update
 
 begin
-  
+
   api_instance.update_inventory_list_item(korona_account_id, inventory_id, inventory_list_id, product_id, inventory_list_item)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling InventoriesApi->update_inventory_list_item: #{e}"
@@ -1065,7 +1065,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_inventory_list_item_with_http_info(korona_account_id, inventory_id, inventory_list_id, product_id, inventory_list_item)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1079,7 +1079,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **product_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
@@ -1120,13 +1120,13 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::InventoriesApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 inventory_id = 'inventory_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_id = 'inventory_list_id_example' # String | id of the related object (important: id should match the uuid-format)
 inventory_list_item = [KoronaCloudClient::InventoryListItem.new] # Array<InventoryListItem> | an array of inventory list items to update
 
 begin
-  
+
   result = api_instance.update_inventory_list_items(korona_account_id, inventory_id, inventory_list_id, inventory_list_item)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -1142,7 +1142,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_inventory_list_items_with_http_info(korona_account_id, inventory_id, inventory_list_id, inventory_list_item)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1156,7 +1156,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **inventory_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **inventory_list_item** | [**Array&lt;InventoryListItem&gt;**](InventoryListItem.md) | an array of inventory list items to update |  |

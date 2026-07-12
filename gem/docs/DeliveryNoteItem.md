@@ -5,14 +5,15 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **product** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **quantity** | **Float** |  | [optional] |
-| **serial_numbers** | **Array&lt;Object&gt;** |  | [optional] |
+| **quantity** | **Float** | Quantity of the line item. | [optional] |
+| **serial_numbers** | **Array&lt;String&gt;** | Serial numbers assigned to this item. | [optional] |
 | **sector** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **commodity_group** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **indent** | **Integer** |  | [optional] |
+| **indent** | **Integer** | Indentation level used for item grouping. Sub items are indented by one level. | [optional] |
 | **total** | [**TotalPrice**](TotalPrice.md) |  | [optional] |
-| **info_texts** | **Array&lt;Object&gt;** |  | [optional] |
-| **id** | **String** |  | [optional] |
+| **info_texts** | **Array&lt;String&gt;** | Additional informational texts for this item. | [optional] |
+| **id** | **String** | Unique identifier of the item. | [optional] |
+| **voucher_transaction_reference** | [**ModelReference**](ModelReference.md) |  | [optional] |
 
 ## Example
 
@@ -28,7 +29,8 @@ instance = KoronaCloudClient::DeliveryNoteItem.new(
   indent: null,
   total: null,
   info_texts: null,
-  id: null
+  id: null,
+  voucher_transaction_reference: null
 )
 ```
 

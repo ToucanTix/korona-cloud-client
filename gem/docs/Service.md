@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **parameter** | **String** |  | [optional] |
-| **type** | **String** |  | [optional] |
-| **processing_mode** | **String** |  | [optional] |
+| **parameter** | **String** | Provider-specific parameter for the payment service integration. | [optional] |
+| **type** | **String** | Connector type used to communicate with the payment provider. | [optional] |
+| **processing_mode** | **String** | Processing strategy for the connector (for example default flow or pre-authorization). | [optional] |
 
 ## Example
 

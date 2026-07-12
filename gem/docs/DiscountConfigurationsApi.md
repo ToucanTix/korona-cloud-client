@@ -1,6 +1,6 @@
 # KoronaCloudClient::DiscountConfigurationsApi
 
-All URIs are relative to *http://localhost:8080/web/api/v3*
+All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -41,7 +41,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 discount_level = [KoronaCloudClient::DiscountLevel.new] # Array<DiscountLevel> | array of new discount levels
 opts = {
@@ -50,7 +50,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.add_discount_configuration_discount_levels(korona_account_id, discount_configuration_id, discount_level, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -66,7 +66,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_discount_configuration_discount_levels_with_http_info(korona_account_id, discount_configuration_id, discount_level, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -80,7 +80,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **discount_level** | [**Array&lt;DiscountLevel&gt;**](DiscountLevel.md) | array of new discount levels |  |
 | **upsert** | **Boolean** | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead | [optional] |
@@ -121,7 +121,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration = [KoronaCloudClient::DiscountConfiguration.new] # Array<DiscountConfiguration> | array of new discount configurations
 opts = {
   upsert: true, # Boolean | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead
@@ -129,7 +129,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.add_discount_configuration_discounts(korona_account_id, discount_configuration, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -145,7 +145,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_discount_configuration_discounts_with_http_info(korona_account_id, discount_configuration, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -159,7 +159,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration** | [**Array&lt;DiscountConfiguration&gt;**](DiscountConfiguration.md) | array of new discount configurations |  |
 | **upsert** | **Boolean** | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead | [optional] |
 | **write_mode** | **String** | DEFAULT &#x3D; insert; ADD_OR_UPDATE &#x3D; insert or update, overwrite all non-null fields; ADD_OR_REPLACE &#x3D; insert or update, overwrite all fields | [optional] |
@@ -199,12 +199,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 discount_level_id = 'discount_level_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.delete_discount_configuration_discount_level(korona_account_id, discount_configuration_id, discount_level_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling DiscountConfigurationsApi->delete_discount_configuration_discount_level: #{e}"
@@ -219,7 +219,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_discount_configuration_discount_level_with_http_info(korona_account_id, discount_configuration_id, discount_level_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -233,7 +233,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **discount_level_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
@@ -272,12 +272,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 discount_level = [KoronaCloudClient::DiscountLevel.new] # Array<DiscountLevel> | array of existing discount levels (id or number required)
 
 begin
-  
+
   result = api_instance.delete_discount_configuration_discount_levels(korona_account_id, discount_configuration_id, discount_level)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -293,7 +293,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_discount_configuration_discount_levels_with_http_info(korona_account_id, discount_configuration_id, discount_level)
   p status_code # => 2xx
   p headers # => { ... }
@@ -307,7 +307,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **discount_level** | [**Array&lt;DiscountLevel&gt;**](DiscountLevel.md) | array of existing discount levels (id or number required) |  |
 
@@ -346,11 +346,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_discount_configuration(korona_account_id, discount_configuration_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -366,7 +366,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_discount_configuration_with_http_info(korona_account_id, discount_configuration_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -380,7 +380,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -418,12 +418,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 discount_level_id = 'discount_level_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_discount_configuration_discount_level(korona_account_id, discount_configuration_id, discount_level_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -439,7 +439,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_discount_configuration_discount_level_with_http_info(korona_account_id, discount_configuration_id, discount_level_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -453,7 +453,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **discount_level_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
@@ -492,7 +492,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
   page: 56, # Integer | number of the page to fetch
@@ -503,7 +503,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_discount_configuration_discount_levels(korona_account_id, discount_configuration_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -519,7 +519,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_discount_configuration_discount_levels_with_http_info(korona_account_id, discount_configuration_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -533,7 +533,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
@@ -576,7 +576,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
@@ -587,7 +587,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_discount_configurations(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -603,7 +603,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_discount_configurations_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -617,7 +617,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |
@@ -660,11 +660,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_level_id = 'discount_level_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_discount_level(korona_account_id, discount_level_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -680,7 +680,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_discount_level_with_http_info(korona_account_id, discount_level_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -694,7 +694,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_level_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -732,7 +732,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
@@ -743,7 +743,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_discount_levels(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -759,7 +759,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_discount_levels_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -773,7 +773,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |
@@ -816,12 +816,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 discount_configuration = KoronaCloudClient::DiscountConfiguration.new # DiscountConfiguration | the properties to update of the discount configuration
 
 begin
-  
+
   api_instance.update_discount_configuration(korona_account_id, discount_configuration_id, discount_configuration)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling DiscountConfigurationsApi->update_discount_configuration: #{e}"
@@ -836,7 +836,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_discount_configuration_with_http_info(korona_account_id, discount_configuration_id, discount_configuration)
   p status_code # => 2xx
   p headers # => { ... }
@@ -850,7 +850,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **discount_configuration** | [**DiscountConfiguration**](DiscountConfiguration.md) | the properties to update of the discount configuration |  |
 
@@ -889,13 +889,13 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 discount_level_id = 'discount_level_id_example' # String | id of the related object (important: id should match the uuid-format)
 discount_level = KoronaCloudClient::DiscountLevel.new # DiscountLevel | the properties to update of the discount level
 
 begin
-  
+
   api_instance.update_discount_configuration_discount_level(korona_account_id, discount_configuration_id, discount_level_id, discount_level)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling DiscountConfigurationsApi->update_discount_configuration_discount_level: #{e}"
@@ -910,7 +910,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_discount_configuration_discount_level_with_http_info(korona_account_id, discount_configuration_id, discount_level_id, discount_level)
   p status_code # => 2xx
   p headers # => { ... }
@@ -924,7 +924,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **discount_level_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **discount_level** | [**DiscountLevel**](DiscountLevel.md) | the properties to update of the discount level |  |
@@ -964,12 +964,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration_id = 'discount_configuration_id_example' # String | id of the related object (important: id should match the uuid-format)
 discount_level = [KoronaCloudClient::DiscountLevel.new] # Array<DiscountLevel> | array of discount levels
 
 begin
-  
+
   result = api_instance.update_discount_configuration_discount_levels(korona_account_id, discount_configuration_id, discount_level)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -985,7 +985,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_discount_configuration_discount_levels_with_http_info(korona_account_id, discount_configuration_id, discount_level)
   p status_code # => 2xx
   p headers # => { ... }
@@ -999,7 +999,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **discount_level** | [**Array&lt;DiscountLevel&gt;**](DiscountLevel.md) | array of discount levels |  |
 
@@ -1038,11 +1038,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::DiscountConfigurationsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 discount_configuration = [KoronaCloudClient::DiscountConfiguration.new] # Array<DiscountConfiguration> | an array of existing discountConfigurations
 
 begin
-  
+
   result = api_instance.update_discount_configurations(korona_account_id, discount_configuration)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -1058,7 +1058,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_discount_configurations_with_http_info(korona_account_id, discount_configuration)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1072,7 +1072,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **discount_configuration** | [**Array&lt;DiscountConfiguration&gt;**](DiscountConfiguration.md) | an array of existing discountConfigurations |  |
 
 ### Return type

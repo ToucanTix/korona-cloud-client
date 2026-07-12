@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **exclusive** | **Boolean** |  | [optional] |
+| **exclusive** | **Boolean** | If true, exclusive. | [optional] |
 | **layer** | [**ModelReference**](ModelReference.md) |  | [optional] |
 
 ## Example

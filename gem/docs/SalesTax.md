@@ -6,13 +6,13 @@
 | ---- | ---- | ----------- | ----- |
 | **active** | **Boolean** | indicates whether the object is active for use or not | [optional][readonly] |
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
-| **revision** | **Integer** | the revision number of the object. revision numbers are unique per object-type. there is is no object of the same type with identical revision numbers. | [optional][readonly] |
-| **number** | **String** | number of the object, like it is set in backoffice; will be removed when active&#x3D;false | [optional] |
-| **dsfinvk_tax_key** | **String** |  | [optional] |
+| **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
+| **number** | **String** | number of the object, like it is set in backoffice | [optional] |
+| **dsfinvk_tax_key** | **String** | Dsfinvk tax key. | [optional] |
 | **economic_zone** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **included** | **Boolean** |  | [optional] |
-| **name** | **String** |  | [optional] |
-| **rates** | [**Array&lt;SalesTaxRate&gt;**](SalesTaxRate.md) |  | [optional] |
+| **included** | **Boolean** | If the tax is included in the product price. (VAT) | [optional] |
+| **name** | **String** | Display name. | [optional] |
+| **rates** | [**Array&lt;SalesTaxRate&gt;**](SalesTaxRate.md) | The list of tax rates. Only the most recent valid tax rate will be applied to the sales transaction. | [optional] |
 | **revenue_account** | [**ModelReference**](ModelReference.md) |  | [optional] |
 
 ## Example

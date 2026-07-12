@@ -5,11 +5,11 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **coupon** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **redeemed** | **Boolean** |  | [optional] |
-| **auto_generated** | **Boolean** |  | [optional] |
-| **selected_by_promotions** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **triggered_by_promotions** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **coupon_number** | **String** |  | [optional] |
+| **redeemed** | **Boolean** | If true, redeemed. | [optional] |
+| **auto_generated** | **Boolean** | If true, auto generated. | [optional] |
+| **selected_by_promotions** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the selected by promotions associated with this resource. | [optional] |
+| **triggered_by_promotions** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the triggered by promotions associated with this resource. | [optional] |
+| **coupon_number** | **String** | Coupon number. | [optional] |
 
 ## Example
 

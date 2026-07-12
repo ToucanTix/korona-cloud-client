@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **assortment** | **Integer** |  | [optional] |
-| **customers** | **Integer** |  | [optional] |
-| **employees** | **Integer** |  | [optional] |
+| **assortment** | **Integer** | Rating value for assortment quality. | [optional] |
+| **customers** | **Integer** | Rating value for customer behavior or satisfaction. | [optional] |
+| **employees** | **Integer** | Rating value for employee performance. | [optional] |
 
 ## Example
 

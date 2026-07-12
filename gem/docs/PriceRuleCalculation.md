@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **operand** | **Float** |  | [optional] |
-| **operator** | **String** |  | [optional] |
+| **operand** | **Float** | Operand. | [optional] |
+| **operator** | **String** | Operator. | [optional] |
 
 ## Example
 

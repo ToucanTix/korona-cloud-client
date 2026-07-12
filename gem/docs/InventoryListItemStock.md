@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **actual** | **Float** |  | [optional] |
-| **nominal** | **Float** |  | [optional] |
+| **actual** | **Float** | Actually counted stock quantity. | [optional] |
+| **nominal** | **Float** | Nominal (expected) stock quantity. | [optional] |
 
 ## Example
 

@@ -6,7 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **start** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 | **_end** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
-| **results** | [**Hash&lt;String, RevenueData&gt;**](RevenueData.md) |  | [optional] |
+| **results** | [**Hash&lt;String, RevenueData&gt;**](RevenueData.md) | Results. | [optional] |
 
 ## Example
 
@@ -14,8 +14,8 @@
 require 'korona-cloud-client'
 
 instance = KoronaCloudClient::PeriodRevenueDataMapStringRevenueData.new(
-  start: 2018-11-22T08:40:21Z,
-  _end: 2018-11-22T08:40:21Z,
+  start: 2018-11-22T09:40:21+01:00,
+  _end: 2018-11-22T09:40:21+01:00,
   results: null
 )
 ```

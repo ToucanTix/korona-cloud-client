@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **customer_groups** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **customers** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
+| **customer_groups** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the customer groups associated with this resource. | [optional] |
+| **customers** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the customers associated with this resource. | [optional] |
 | **external_coupon_number** | **String** | ignored if &#x60;type&#x60;&#x3D;STAMPS | [optional] |
 | **product_amount** | [**PromotionTriggerProductAmountCondition**](PromotionTriggerProductAmountCondition.md) |  | [optional] |
 | **receipt_product_amount** | [**PromotionTriggerReceiptProductAmountCondition**](PromotionTriggerReceiptProductAmountCondition.md) |  | [optional] |

@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **firstname** | **String** |  | [optional] |
-| **lastname** | **String** |  | [optional] |
-| **customer_number** | **String** |  | [optional] |
-| **image** | **String** |  | [optional] |
+| **firstname** | **String** | Firstname. | [optional] |
+| **lastname** | **String** | Lastname. | [optional] |
+| **customer_number** | **String** | Customer number. | [optional] |
+| **image** | **String** | Image. | [optional] |
 
 ## Example
 

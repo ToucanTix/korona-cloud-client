@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **page** | **String** |  | [optional] |
+| **page** | **String** | Which POS workflow screen this layout block applies to (e.g. payment, booking, login). | [optional] |
 | **quick_button_layout** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **tab_one** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **tab_two** | [**ModelReference**](ModelReference.md) |  | [optional] |

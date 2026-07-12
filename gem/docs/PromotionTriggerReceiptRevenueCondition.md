@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **equality_condition** | **String** |  | [optional] |
-| **value** | **Float** |  | [optional] |
+| **equality_condition** | **String** | Equality condition. | [optional] |
+| **value** | **Float** | Value. | [optional] |
 
 ## Example
 

@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **discount_calculations** | [**Array&lt;PromotionBenefitExtendedDiscountDiscountCalculation&gt;**](PromotionBenefitExtendedDiscountDiscountCalculation.md) |  | [optional] |
+| **discount_calculations** | [**Array&lt;PromotionBenefitExtendedDiscountDiscountCalculation&gt;**](PromotionBenefitExtendedDiscountDiscountCalculation.md) | Discount calculations. | [optional] |
 | **position_selection_criteria** | [**PromotionBenefitExtendedDiscountPositionSelectionCriteria**](PromotionBenefitExtendedDiscountPositionSelectionCriteria.md) |  | [optional] |
 
 ## Example

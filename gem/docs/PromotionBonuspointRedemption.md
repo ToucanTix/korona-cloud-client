@@ -7,7 +7,7 @@
 | **fixed_discount** | [**PromotionBonuspointRedemptionFixedDiscount**](PromotionBonuspointRedemptionFixedDiscount.md) |  | [optional] |
 | **percentage_discount** | [**PromotionBonuspointRedemptionPercentageDiscount**](PromotionBonuspointRedemptionPercentageDiscount.md) |  | [optional] |
 | **tag_discount** | [**PromotionBonuspointRedemptionTagDiscount**](PromotionBonuspointRedemptionTagDiscount.md) |  | [optional] |
-| **type** | **String** |  | [optional] |
+| **type** | **String** | Provider type of the linked payment service integration. | [optional] |
 
 ## Example
 

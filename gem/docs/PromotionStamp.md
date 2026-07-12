@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **layer** | [**PromotionLayer**](PromotionLayer.md) |  | [optional] |
-| **stamp_amount** | **Integer** |  | [optional] |
-| **stamp_configuration** | **String** |  | [optional] |
+| **stamp_amount** | **Integer** | Stamp amount. | [optional] |
+| **stamp_configuration** | **String** | Stamp configuration. | [optional] |
 
 ## Example
 

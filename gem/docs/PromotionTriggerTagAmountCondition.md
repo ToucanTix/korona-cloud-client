@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **equality_condition** | **String** |  | [optional] |
+| **equality_condition** | **String** | Equality condition. | [optional] |
 | **tag** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **value** | **Float** |  | [optional] |
+| **value** | **Float** | Value. | [optional] |
 
 ## Example
 

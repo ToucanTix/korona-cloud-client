@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **account** | **Integer** |  | [optional] |
-| **cashier** | **Integer** |  | [optional] |
-| **customer** | **Integer** |  | [optional] |
-| **customer_group** | **Integer** |  | [optional] |
-| **organizational_unit** | **Integer** |  | [optional] |
-| **sales_tax** | **Integer** |  | [optional] |
+| **account** | **Integer** | Account. | [optional] |
+| **cashier** | **Integer** | Cashier. | [optional] |
+| **customer** | **Integer** | Customer. | [optional] |
+| **customer_group** | **Integer** | Customer group. | [optional] |
+| **organizational_unit** | **Integer** | Organizational unit. | [optional] |
+| **sales_tax** | **Integer** | Sales tax. | [optional] |
 
 ## Example
 

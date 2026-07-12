@@ -6,12 +6,13 @@
 | ---- | ---- | ----------- | ----- |
 | **active** | **Boolean** | indicates whether the object is active for use or not | [optional][readonly] |
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
-| **revision** | **Integer** | the revision number of the object. revision numbers are unique per object-type. there is is no object of the same type with identical revision numbers. | [optional][readonly] |
-| **number** | **String** | number of the object, like it is set in backoffice; will be removed when active&#x3D;false | [optional] |
-| **container_mode** | **Boolean** |  | [optional] |
+| **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
+| **number** | **String** | number of the object, like it is set in backoffice | [optional] |
+| **container_mode** | **Boolean** | Deprecated, please use containerSelection instead. | [optional][readonly] |
+| **container_selection** | **String** | How container selection is handled at this POS (disabled, always on, or user-controlled). | [optional] |
 | **contra_account** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **coupled** | **Boolean** |  | [optional][readonly] |
-| **coupled_client_system_information** | **Hash&lt;String, String&gt;** |  | [optional] |
+| **coupled** | **Boolean** | Read-only flag indicating whether this POS is currently coupled to an external client system. | [optional][readonly] |
+| **coupled_client_system_information** | **Hash&lt;String, String&gt;** | Coupled client system information. | [optional] |
 | **coupling_id** | **String** | write only | [optional] |
 | **customer_display_configuration** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **default_customer_group** | [**ModelReference**](ModelReference.md) |  | [optional] |
@@ -19,27 +20,29 @@
 | **device_information** | [**DeviceInformation**](DeviceInformation.md) |  | [optional] |
 | **entry_gate** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **external** | **Boolean** | deprecated; use type instead | [optional] |
-| **fiscal_service_type** | **String** |  | [optional] |
+| **fiscal_service_type** | **String** | Fiscalization provider/implementation used by this POS. | [optional] |
 | **fiscal_unit** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **fiscal_unit_pre_configuration** | [**FiscalUnitPreConfiguration**](FiscalUnitPreConfiguration.md) |  | [optional] |
 | **language** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **last_receipt_number** | **String** | last receipt number - only shown if external&#x3D;true and coupled&#x3D;false; usable for client-side receipt counter. | [optional][readonly] |
 | **last_z_count** | **Integer** | last zcount property - only shown if external&#x3D;true and coupled&#x3D;false; usable for client-side zcount. | [optional][readonly] |
 | **layout_configuration** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **name** | **String** |  | [optional] |
+| **name** | **String** | Display name. | [optional] |
 | **organizational_unit** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **pos_profile** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **print_footer_lines** | **Hash&lt;String, String&gt;** |  | [optional] |
-| **print_header_lines** | **Hash&lt;String, String&gt;** |  | [optional] |
-| **receipt_info_texts** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **receipt_number_prefix** | **String** |  | [optional][readonly] |
+| **print_footer_lines** | **Hash&lt;String, String&gt;** | Print footer lines. | [optional] |
+| **print_header_lines** | **Hash&lt;String, String&gt;** | Print header lines. | [optional] |
+| **receipt_info_texts** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Info-text entries printed/shown with receipts on this POS. | [optional] |
+| **receipt_number_prefix** | **String** | Receipt number prefix. | [optional][readonly] |
 | **revenue_account** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **table_overview** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **tip_account** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **use_alternative_sector** | **Boolean** |  | [optional] |
+| **use_alternative_sector** | **Boolean** | If enabled, alternative sector logic is used for selected transaction flows. | [optional] |
 | **warehouse** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **device_configuration_variable_values** | [**Array&lt;DeviceConfigurationVariableValue&gt;**](DeviceConfigurationVariableValue.md) |  | [optional] |
-| **type** | **String** |  | [optional] |
+| **device_configuration_variable_values** | [**Array&lt;DeviceConfigurationVariableValue&gt;**](DeviceConfigurationVariableValue.md) | Device configuration variable values. | [optional] |
+| **type** | **String** | Provider type of the linked payment service integration. | [optional] |
+| **sco_configuration** | [**ModelReference**](ModelReference.md) |  | [optional] |
+| **surcharge_account** | [**ModelReference**](ModelReference.md) |  | [optional] |
 
 ## Example
 
@@ -52,6 +55,7 @@ instance = KoronaCloudClient::Pos.new(
   revision: null,
   number: null,
   container_mode: null,
+  container_selection: null,
   contra_account: null,
   coupled: null,
   coupled_client_system_information: null,
@@ -82,7 +86,9 @@ instance = KoronaCloudClient::Pos.new(
   use_alternative_sector: null,
   warehouse: null,
   device_configuration_variable_values: null,
-  type: null
+  type: null,
+  sco_configuration: null,
+  surcharge_account: null
 )
 ```
 

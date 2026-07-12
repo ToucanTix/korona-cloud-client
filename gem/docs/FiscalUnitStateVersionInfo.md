@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **api** | **String** |  | [optional] |
-| **hardware** | **String** |  | [optional] |
-| **software** | **String** |  | [optional] |
+| **api** | **String** | Version of the fiscal API. | [optional] |
+| **hardware** | **String** | Hardware version of the fiscal unit. | [optional] |
+| **software** | **String** | Software version of the fiscal unit. | [optional] |
 
 ## Example
 

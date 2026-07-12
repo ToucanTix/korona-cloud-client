@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **gross** | **Float** |  | [optional] |
-| **net** | **Float** |  | [optional] |
+| **gross** | **Float** | Gross. | [optional] |
+| **net** | **Float** | Net. | [optional] |
 
 ## Example
 

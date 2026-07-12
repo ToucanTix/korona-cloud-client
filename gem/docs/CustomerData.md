@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **String** |  | [optional] |
-| **phone** | **String** |  | [optional] |
+| **name** | **String** | Display name. | [optional] |
+| **phone** | **String** | Phone. | [optional] |
 
 ## Example
 

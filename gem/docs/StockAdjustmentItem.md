@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **amount** | **Float** |  | [optional] |
+| **amount** | **Float** | Adjusted amount/quantity for the product. | [optional] |
 | **product** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **reason** | [**StockAdjustmentItemReason**](StockAdjustmentItemReason.md) |  | [optional] |
-| **revision** | **Integer** |  | [optional][readonly] |
+| **revision** | **Integer** | Revision number used for optimistic locking. | [optional][readonly] |
 
 ## Example
 

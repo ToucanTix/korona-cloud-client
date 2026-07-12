@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **code** | **Integer** |  | [optional] |
-| **temperature** | **Integer** |  | [optional] |
-| **temperature_unit** | **String** |  | [optional] |
+| **code** | **Integer** | Weather condition code. | [optional] |
+| **temperature** | **Integer** | Measured temperature for the day. | [optional] |
+| **temperature_unit** | **String** | Unit of the provided temperature. | [optional] |
 
 ## Example
 

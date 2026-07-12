@@ -4,11 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **actual** | **Float** |  | [optional] |
-| **lent** | **Float** |  | [optional] |
-| **max_level** | **Float** |  | [optional] |
-| **ordered** | **Float** |  | [optional] |
-| **reorder_level** | **Float** |  | [optional] |
+| **actual** | **Float** | Actual. | [optional] |
+| **lent** | **Float** | Lent. | [optional] |
+| **max_level** | **Float** | Max level. | [optional] |
+| **ordered** | **Float** | Ordered. | [optional] |
+| **reorder_level** | **Float** | Reorder level. | [optional] |
 
 ## Example
 

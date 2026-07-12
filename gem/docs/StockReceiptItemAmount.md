@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **expected** | **Float** |  | [optional] |
-| **received** | **Float** |  | [optional] |
+| **expected** | **Float** | Expected. | [optional] |
+| **received** | **Float** | Received. | [optional] |
 
 ## Example
 

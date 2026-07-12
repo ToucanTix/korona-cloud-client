@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **available** | **Integer** |  | [optional] |
-| **total** | **Integer** |  | [optional] |
+| **available** | **Integer** | Remaining available capacity of the event. | [optional][readonly] |
+| **total** | **Integer** | Total capacity of the event. | [optional] |
 
 ## Example
 

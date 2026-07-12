@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **reason_text** | **String** |  | [optional] |
+| **reason_text** | **String** | Reason text. | [optional] |
 
 ## Example
 

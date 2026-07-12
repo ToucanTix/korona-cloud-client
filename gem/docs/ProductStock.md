@@ -5,12 +5,12 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **amount** | [**Amount**](Amount.md) |  | [optional] |
-| **average_purchase_price** | **Float** |  | [optional] |
+| **average_purchase_price** | **Float** | Average purchase price. | [optional] |
 | **product** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **revision** | **Integer** |  | [optional][readonly] |
+| **revision** | **Integer** | Revision. | [optional][readonly] |
 | **warehouse** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **bin_location** | **String** |  | [optional] |
-| **listed** | **Boolean** |  | [optional] |
+| **bin_location** | **String** | Bin location. | [optional] |
+| **listed** | **Boolean** | If true, listed. | [optional] |
 
 ## Example
 

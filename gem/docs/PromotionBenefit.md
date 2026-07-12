@@ -8,7 +8,7 @@
 | **extended** | [**PromotionBenefitExtendedDiscount**](PromotionBenefitExtendedDiscount.md) |  | [optional] |
 | **layer** | [**PromotionLayer**](PromotionLayer.md) |  | [optional] |
 | **reduce_product_amount** | [**PromotionBenefitReduceProductAmount**](PromotionBenefitReduceProductAmount.md) |  | [optional] |
-| **type** | **String** |  | [optional] |
+| **type** | **String** | Provider type of the linked payment service integration. | [optional] |
 
 ## Example
 

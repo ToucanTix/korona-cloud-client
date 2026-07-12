@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **promotion** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **iterations** | **Integer** |  | [optional] |
-| **discount_amount** | **Float** |  | [optional] |
+| **iterations** | **Integer** | Iterations. | [optional] |
+| **discount_amount** | **Float** | Discount amount. | [optional] |
 
 ## Example
 

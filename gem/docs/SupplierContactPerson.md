@@ -4,13 +4,13 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **email** | **String** |  | [optional] |
-| **fax** | **String** |  | [optional] |
-| **firstname** | **String** |  | [optional] |
-| **mobile** | **String** |  | [optional] |
-| **phone** | **String** |  | [optional] |
-| **salutation** | **String** |  | [optional] |
-| **surname** | **String** |  | [optional] |
+| **email** | **String** | Email. | [optional] |
+| **fax** | **String** | Fax. | [optional] |
+| **firstname** | **String** | Firstname. | [optional] |
+| **mobile** | **String** | Mobile. | [optional] |
+| **phone** | **String** | Phone. | [optional] |
+| **salutation** | **String** | Salutation. | [optional] |
+| **surname** | **String** | Surname. | [optional] |
 
 ## Example
 

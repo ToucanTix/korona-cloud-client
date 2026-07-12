@@ -4,13 +4,13 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **coupon_numbers** | **Array&lt;String&gt;** |  | [optional] |
-| **type** | **String** |  | [optional] |
-| **commodity_groups** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **products** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **sectors** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **tags** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
-| **_not** | **Boolean** |  | [optional] |
+| **coupon_numbers** | **Array&lt;String&gt;** | Coupon numbers. | [optional] |
+| **type** | **String** | Provider type of the linked payment service integration. | [optional] |
+| **commodity_groups** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the commodity groups associated with this resource. | [optional] |
+| **products** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the products associated with this resource. | [optional] |
+| **sectors** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the sectors associated with this resource. | [optional] |
+| **tags** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the tags associated with this resource. | [optional] |
+| **_not** | **Boolean** | If true, not. | [optional] |
 
 ## Example
 

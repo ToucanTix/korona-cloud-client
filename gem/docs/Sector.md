@@ -6,11 +6,11 @@
 | ---- | ---- | ----------- | ----- |
 | **active** | **Boolean** | indicates whether the object is active for use or not | [optional][readonly] |
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
-| **revision** | **Integer** | the revision number of the object. revision numbers are unique per object-type. there is is no object of the same type with identical revision numbers. | [optional][readonly] |
-| **number** | **String** | number of the object, like it is set in backoffice; will be removed when active&#x3D;false | [optional] |
-| **name** | **String** |  | [optional] |
-| **sales_taxes** | [**Array&lt;SectorSalesTaxItem&gt;**](SectorSalesTaxItem.md) |  | [optional] |
-| **revenue_accounts** | [**Array&lt;SectorRevenueAccountItem&gt;**](SectorRevenueAccountItem.md) |  | [optional] |
+| **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
+| **number** | **String** | number of the object, like it is set in backoffice | [optional] |
+| **name** | **String** | Name of the sector. | [optional] |
+| **sales_taxes** | [**Array&lt;SectorSalesTaxItem&gt;**](SectorSalesTaxItem.md) | Sales tax mappings configured for this sector. All applicable sales taxes for this sector are listed here. Please note that only taxes with the matching economic zone are applied during the sale. | [optional] |
+| **revenue_accounts** | [**Array&lt;SectorRevenueAccountItem&gt;**](SectorRevenueAccountItem.md) | Revenue account mappings configured for this sector. This is purely for reporting purposes. | [optional] |
 
 ## Example
 

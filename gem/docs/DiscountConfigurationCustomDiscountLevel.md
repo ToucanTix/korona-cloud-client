@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **discount_level** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **level** | **Integer** |  | [optional] |
+| **level** | **Integer** | Numeric level used for discount permission checks. | [optional] |
 
 ## Example
 

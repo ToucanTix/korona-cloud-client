@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **organizational_unit** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **number** | **String** |  | [optional] |
+| **number** | **String** | The cashier number used in the referenced organizational unit. | [optional] |
 
 ## Example
 

@@ -1,6 +1,6 @@
 # KoronaCloudClient::VoucherTransactionsApi
 
-All URIs are relative to *http://localhost:8080/web/api/v3*
+All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -29,11 +29,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::VoucherTransactionsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 voucher_transaction_id = 'voucher_transaction_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_voucher_transaction(korona_account_id, voucher_transaction_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -49,7 +49,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_voucher_transaction_with_http_info(korona_account_id, voucher_transaction_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -63,7 +63,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **voucher_transaction_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -101,7 +101,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::VoucherTransactionsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
@@ -110,7 +110,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_voucher_transactions(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -126,7 +126,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_voucher_transactions_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -140,7 +140,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **operator** | **String** |  | [optional] |
-| **operand** | **Float** |  | [optional] |
+| **operator** | **String** | Operator. | [optional] |
+| **operand** | **Float** | Operand. | [optional] |
 | **layer** | [**ModelReference**](ModelReference.md) |  | [optional] |
 
 ## Example

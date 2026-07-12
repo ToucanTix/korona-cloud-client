@@ -1,6 +1,6 @@
 # KoronaCloudClient::AssortmentsApi
 
-All URIs are relative to *http://localhost:8080/web/api/v3*
+All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -34,7 +34,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::AssortmentsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 assortment = [KoronaCloudClient::Assortment.new] # Array<Assortment> | array of new assortments
 opts = {
   upsert: true, # Boolean | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead
@@ -42,7 +42,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.add_assortments(korona_account_id, assortment, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -58,7 +58,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_assortments_with_http_info(korona_account_id, assortment, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -72,7 +72,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **assortment** | [**Array&lt;Assortment&gt;**](Assortment.md) | array of new assortments |  |
 | **upsert** | **Boolean** | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead | [optional] |
 | **write_mode** | **String** | DEFAULT &#x3D; insert; ADD_OR_UPDATE &#x3D; insert or update, overwrite all non-null fields; ADD_OR_REPLACE &#x3D; insert or update, overwrite all fields | [optional] |
@@ -112,11 +112,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::AssortmentsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 assortment_id = 'assortment_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.delete_assortment(korona_account_id, assortment_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling AssortmentsApi->delete_assortment: #{e}"
@@ -131,7 +131,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_assortment_with_http_info(korona_account_id, assortment_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -145,7 +145,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **assortment_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -183,11 +183,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::AssortmentsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 assortment = [KoronaCloudClient::Assortment.new] # Array<Assortment> | array of existing assortments (id or number required)
 
 begin
-  
+
   result = api_instance.delete_assortments(korona_account_id, assortment)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -203,7 +203,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_assortments_with_http_info(korona_account_id, assortment)
   p status_code # => 2xx
   p headers # => { ... }
@@ -217,7 +217,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **assortment** | [**Array&lt;Assortment&gt;**](Assortment.md) | array of existing assortments (id or number required) |  |
 
 ### Return type
@@ -255,11 +255,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::AssortmentsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 assortment_id = 'assortment_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_assortment(korona_account_id, assortment_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -275,7 +275,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_assortment_with_http_info(korona_account_id, assortment_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -289,7 +289,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **assortment_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -327,7 +327,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::AssortmentsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
@@ -338,7 +338,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.get_assortments(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -354,7 +354,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_assortments_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -368,7 +368,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |
@@ -411,12 +411,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::AssortmentsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 assortment_id = 'assortment_id_example' # String | id of the related object (important: id should match the uuid-format)
 assortment = KoronaCloudClient::Assortment.new # Assortment | the properties to update of the assortment
 
 begin
-  
+
   api_instance.update_assortment(korona_account_id, assortment_id, assortment)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling AssortmentsApi->update_assortment: #{e}"
@@ -431,7 +431,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_assortment_with_http_info(korona_account_id, assortment_id, assortment)
   p status_code # => 2xx
   p headers # => { ... }
@@ -445,7 +445,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **assortment_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **assortment** | [**Assortment**](Assortment.md) | the properties to update of the assortment |  |
 
@@ -484,11 +484,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::AssortmentsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 assortment = [KoronaCloudClient::Assortment.new] # Array<Assortment> | array of existing assortments (id or number required)
 
 begin
-  
+
   result = api_instance.update_assortments(korona_account_id, assortment)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -504,7 +504,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_assortments_with_http_info(korona_account_id, assortment)
   p status_code # => 2xx
   p headers # => { ... }
@@ -518,7 +518,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **assortment** | [**Array&lt;Assortment&gt;**](Assortment.md) | array of existing assortments (id or number required) |  |
 
 ### Return type

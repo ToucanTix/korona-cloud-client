@@ -6,11 +6,11 @@
 | ---- | ---- | ----------- | ----- |
 | **assortment** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **commodity_group** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **name** | **String** |  | [optional] |
-| **prices** | [**Array&lt;ProductPrice&gt;**](ProductPrice.md) |  | [optional] |
-| **codes** | [**Array&lt;ProductCode&gt;**](ProductCode.md) |  | [optional] |
+| **name** | **String** | Display name. | [optional] |
+| **prices** | [**Array&lt;ProductPrice&gt;**](ProductPrice.md) | Prices. | [optional] |
+| **codes** | [**Array&lt;ProductCode&gt;**](ProductCode.md) | Codes. | [optional] |
 | **sector** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **supplier_prices** | [**Array&lt;ProductSupplierPrice&gt;**](ProductSupplierPrice.md) |  | [optional] |
+| **supplier_prices** | [**Array&lt;ProductSupplierPrice&gt;**](ProductSupplierPrice.md) | Supplier prices. | [optional] |
 
 ## Example
 

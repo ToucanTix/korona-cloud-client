@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **daily** | **Integer** |  | [optional] |
-| **total** | **Integer** |  | [optional] |
+| **daily** | **Integer** | Daily. | [optional] |
+| **total** | **Integer** | Total. | [optional] |
 
 ## Example
 

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **exclusive** | **Boolean** |  | [optional] |
-| **value** | **Float** |  | [optional] |
+| **exclusive** | **Boolean** | If true, exclusive. | [optional] |
+| **value** | **Float** | Value. | [optional] |
 
 ## Example
 

@@ -13,8 +13,8 @@
 require 'korona-cloud-client'
 
 instance = KoronaCloudClient::DateInterval.new(
-  from: null,
-  to: null
+  from: 2020-11-22,
+  to: 2020-11-25
 )
 ```
 

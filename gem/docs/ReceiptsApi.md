@@ -1,6 +1,6 @@
 # KoronaCloudClient::ReceiptsApi
 
-All URIs are relative to *http://localhost:8080/web/api/v3*
+All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -30,14 +30,14 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::ReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 receipt_id = 'receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 opts = {
   voided_items: true # Boolean | when set to true, voided items will included in response
 }
 
 begin
-  
+
   result = api_instance.get_receipt(korona_account_id, receipt_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -53,7 +53,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_receipt_with_http_info(korona_account_id, receipt_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -67,7 +67,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **voided_items** | **Boolean** | when set to true, voided items will included in response | [optional] |
 
@@ -106,12 +106,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::ReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 receipt_id = 'receipt_id_example' # String | id of the related object (important: id should match the uuid-format)
 receipt_item_id = 'receipt_item_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_receipt_item(korona_account_id, receipt_id, receipt_item_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -127,7 +127,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_receipt_item_with_http_info(korona_account_id, receipt_id, receipt_item_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -141,7 +141,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **receipt_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **receipt_item_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
@@ -180,7 +180,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::ReceiptsApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
@@ -195,11 +195,14 @@ opts = {
   min_booking_time: Time.parse('2013-10-20T19:20:30+01:00'), # Time | min (inclusive) booking time of the receipt (ISO 8601; Format: YYYY-MM-DDTHH:MM:SS; timezone optional)
   max_booking_time: Time.parse('2013-10-20T19:20:30+01:00'), # Time | max (inclusive) booking time of the receipt (ISO 8601; Format: YYYY-MM-DDTHH:MM:SS; timezone optional)
   voided_items: true, # Boolean | when set to true, voided items will included in response
-  order_number: 'order_number_example' # String | order number
+  order_number: 'order_number_example', # String | order number
+  customer: 'customer_example', # String | customer id to filter by
+  cashier: 'cashier_example', # String | cashier id to filter by
+  omit_page_counts: true # Boolean | Set 'pagesTotal' and 'resultsTotal' to -1, allowing us to omit the count operation and speeding up the query.
 }
 
 begin
-  
+
   result = api_instance.get_receipts(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -215,7 +218,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_receipts_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -229,7 +232,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |
@@ -244,6 +247,9 @@ end
 | **max_booking_time** | **Time** | max (inclusive) booking time of the receipt (ISO 8601; Format: YYYY-MM-DDTHH:MM:SS; timezone optional) | [optional] |
 | **voided_items** | **Boolean** | when set to true, voided items will included in response | [optional] |
 | **order_number** | **String** | order number | [optional] |
+| **customer** | **String** | customer id to filter by | [optional] |
+| **cashier** | **String** | cashier id to filter by | [optional] |
+| **omit_page_counts** | **Boolean** | Set &#39;pagesTotal&#39; and &#39;resultsTotal&#39; to -1, allowing us to omit the count operation and speeding up the query. | [optional] |
 
 ### Return type
 

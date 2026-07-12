@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **size** | **Float** |  | [optional] |
-| **quantity** | **Float** |  | [optional] |
+| **size** | **Float** | Predefined grid size used for this button layout. | [optional] |
+| **quantity** | **Float** | Quantity. | [optional] |
 
 ## Example
 

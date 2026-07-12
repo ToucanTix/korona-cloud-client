@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **type** | **String** |  | [optional] |
-| **value** | **Float** |  | [optional] |
+| **type** | **String** | Provider type of the linked payment service integration. | [optional] |
+| **value** | **Float** | Value. | [optional] |
 
 ## Example
 

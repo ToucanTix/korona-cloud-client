@@ -6,16 +6,16 @@
 | ---- | ---- | ----------- | ----- |
 | **active** | **Boolean** | indicates whether the object is active for use or not | [optional][readonly] |
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
-| **revision** | **Integer** | the revision number of the object. revision numbers are unique per object-type. there is is no object of the same type with identical revision numbers. | [optional][readonly] |
-| **number** | **String** | number of the object, like it is set in backoffice; will be removed when active&#x3D;false | [optional] |
-| **active_package_details** | [**Array&lt;CloudSubscriptionDetails&gt;**](CloudSubscriptionDetails.md) |  | [optional] |
-| **active_packages** | **Array&lt;String&gt;** |  | [optional] |
+| **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
+| **number** | **String** | number of the object, like it is set in backoffice | [optional] |
+| **active_package_details** | **Object** |  | [optional] |
+| **active_packages** | **Object** |  | [optional] |
 | **address** | [**AddressInformation**](AddressInformation.md) |  | [optional] |
 | **cloud_subscription** | [**CloudSubscription**](CloudSubscription.md) |  | [optional] |
-| **company** | **String** |  | [optional] |
+| **company** | **String** | Company. | [optional] |
 | **identification** | [**CompanyIdentification**](CompanyIdentification.md) |  | [optional] |
-| **test_mode** | **Boolean** |  | [optional] |
-| **default_time_zone** | **String** |  | [optional] |
+| **test_mode** | **Boolean** | If true, test mode. | [optional] |
+| **default_time_zone** | **String** | Default time zone. | [optional] |
 
 ## Example
 

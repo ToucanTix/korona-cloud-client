@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **operand** | **Float** |  | [optional] |
-| **operator** | **String** |  | [optional] |
+| **operand** | **Float** | Operand. | [optional] |
+| **operator** | **String** | Operator. | [optional] |
 | **position_selection_criteria** | [**PromotionBenefitExtendedDiscountPositionSelectionCriteria**](PromotionBenefitExtendedDiscountPositionSelectionCriteria.md) |  | [optional] |
-| **reference** | **String** |  | [optional] |
-| **sum_reference** | **String** |  | [optional] |
-| **receipt_discount** | **Boolean** |  | [optional] |
+| **reference** | **String** | Reference. | [optional] |
+| **sum_reference** | **String** | Reference to the sum associated with this resource. | [optional] |
+| **receipt_discount** | **Boolean** | If true, receipt discount. | [optional] |
 
 ## Example
 

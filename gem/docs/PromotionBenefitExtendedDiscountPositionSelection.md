@@ -7,7 +7,7 @@
 | **count_amount** | [**PromotionBenefitExtendedDiscountPositionSelectionCountAmount**](PromotionBenefitExtendedDiscountPositionSelectionCountAmount.md) |  | [optional] |
 | **discount_amount** | [**PromotionBenefitExtendedDiscountPositionSelectionCountAmount**](PromotionBenefitExtendedDiscountPositionSelectionCountAmount.md) |  | [optional] |
 | **filter** | [**PromotionBenefitExtendedDiscountPositionSelectionFilter**](PromotionBenefitExtendedDiscountPositionSelectionFilter.md) |  | [optional] |
-| **sort** | **String** |  | [optional] |
+| **sort** | **String** | Sort. | [optional] |
 
 ## Example
 

@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **text** | **String** |  | [optional] |
+| **text** | **String** | Text. | [optional] |
 | **type** | [**ModelReference**](ModelReference.md) |  | [optional] |
 
 ## Example

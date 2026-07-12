@@ -10,6 +10,8 @@
 | **quantity** | **Float** |  | [optional] |
 | **total** | [**TotalPrice**](TotalPrice.md) |  | [optional] |
 | **external_references** | **Hash&lt;String, String&gt;** |  | [optional] |
+| **booking_time** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
+| **description** | **String** |  | [optional] |
 
 ## Example
 
@@ -22,7 +24,9 @@ instance = KoronaCloudClient::VoidedReceiptItem.new(
   product: null,
   quantity: null,
   total: null,
-  external_references: null
+  external_references: null,
+  booking_time: 2018-11-22T09:40:21+01:00,
+  description: null
 )
 ```
 

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **bonuspoints** | **Integer** |  | [optional] |
-| **discount_value** | **Float** |  | [optional] |
+| **bonuspoints** | **Integer** | Bonuspoints. | [optional] |
+| **discount_value** | **Float** | Discount value. | [optional] |
 
 ## Example
 

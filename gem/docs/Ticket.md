@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **entry_id** | **Integer** |  | [optional] |
+| **entry_id** | **Integer** | Entry identifier. | [optional] |
 | **personalization** | [**TicketPersonalization**](TicketPersonalization.md) |  | [optional] |
-| **ticket_number** | **String** |  | [optional] |
-| **duplicate** | **Boolean** |  | [optional] |
+| **ticket_number** | **String** | Ticket number. | [optional] |
+| **duplicate** | **Boolean** | If true, duplicate. | [optional] |
 | **creation_date** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
-| **locked** | **Boolean** |  | [optional] |
+| **locked** | **Boolean** | If true, locked. | [optional] |
 | **locked_to** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 
 ## Example
@@ -22,9 +22,9 @@ instance = KoronaCloudClient::Ticket.new(
   personalization: null,
   ticket_number: null,
   duplicate: null,
-  creation_date: 2018-11-22T08:40:21Z,
+  creation_date: 2018-11-22T09:40:21+01:00,
   locked: null,
-  locked_to: 2018-11-22T08:40:21Z
+  locked_to: 2018-11-22T09:40:21+01:00
 )
 ```
 

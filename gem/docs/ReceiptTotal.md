@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **gross** | **Float** |  | [optional] |
-| **net** | **Float** |  | [optional] |
-| **tax** | **Float** |  | [optional] |
+| **gross** | **Float** | Gross. | [optional] |
+| **net** | **Float** | Net. | [optional] |
+| **tax** | **Float** | Tax. | [optional] |
 
 ## Example
 

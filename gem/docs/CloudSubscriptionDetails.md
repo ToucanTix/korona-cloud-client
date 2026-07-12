@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **amount** | **Integer** |  | [optional] |
-| **package_type** | **String** |  | [optional] |
+| **amount** | **Integer** | Amount. | [optional] |
+| **package_type** | **String** | Package type. | [optional] |
 
 ## Example
 

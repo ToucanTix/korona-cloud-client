@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ordered** | **Float** |  | [optional] |
-| **delivered** | **Float** |  | [optional] |
+| **ordered** | **Float** | Ordered. | [optional] |
+| **delivered** | **Float** | Delivered. | [optional] |
 
 ## Example
 

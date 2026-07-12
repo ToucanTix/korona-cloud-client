@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **actual** | **Float** |  | [optional] |
-| **expected** | **Float** |  | [optional] |
+| **actual** | **Float** | Actual counted total amount. | [optional] |
+| **expected** | **Float** | Expected total amount based on transactions. | [optional] |
 
 ## Example
 

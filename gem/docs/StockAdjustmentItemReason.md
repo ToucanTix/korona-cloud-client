@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **comment** | **String** |  | [optional] |
-| **type** | **String** |  | [optional] |
+| **comment** | **String** | Optional comment describing the adjustment reason. | [optional] |
+| **type** | **String** | Type of reason for the stock adjustment. | [optional] |
 
 ## Example
 

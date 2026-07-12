@@ -5,9 +5,9 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **amount_range** | [**PromotionBenefitExtendedDiscountPositionSelectionCriteriaMinMaxRange**](PromotionBenefitExtendedDiscountPositionSelectionCriteriaMinMaxRange.md) |  | [optional] |
-| **max_iterations** | **Integer** |  | [optional] |
+| **max_iterations** | **Integer** | Max iterations. | [optional] |
 | **price_range** | [**PromotionBenefitExtendedDiscountPositionSelectionCriteriaMinMaxRange**](PromotionBenefitExtendedDiscountPositionSelectionCriteriaMinMaxRange.md) |  | [optional] |
-| **selections** | [**Array&lt;PromotionBenefitExtendedDiscountPositionSelection&gt;**](PromotionBenefitExtendedDiscountPositionSelection.md) |  | [optional] |
+| **selections** | [**Array&lt;PromotionBenefitExtendedDiscountPositionSelection&gt;**](PromotionBenefitExtendedDiscountPositionSelection.md) | Selections. | [optional] |
 
 ## Example
 

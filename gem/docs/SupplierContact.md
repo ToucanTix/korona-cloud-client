@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **email** | **String** |  | [optional] |
-| **fax** | **String** |  | [optional] |
-| **phone** | **String** |  | [optional] |
-| **website** | **String** |  | [optional] |
+| **email** | **String** | Email. | [optional] |
+| **fax** | **String** | Fax. | [optional] |
+| **phone** | **String** | Phone. | [optional] |
+| **website** | **String** | Website. | [optional] |
 
 ## Example
 

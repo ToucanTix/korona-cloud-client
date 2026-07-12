@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **product** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **reduction_value** | **Float** |  | [optional] |
+| **reduction_value** | **Float** | Reduction value. | [optional] |
 
 ## Example
 

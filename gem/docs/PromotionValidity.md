@@ -5,12 +5,12 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **date_interval** | [**DateInterval**](DateInterval.md) |  | [optional] |
-| **days_of_month** | **Array&lt;Integer&gt;** |  | [optional] |
-| **days_of_week** | **Array&lt;String&gt;** |  | [optional] |
-| **organizational_units** | [**Array&lt;ModelReference&gt;**](ModelReference.md) |  | [optional] |
+| **days_of_month** | **Array&lt;Integer&gt;** | Days of month. | [optional] |
+| **days_of_week** | **Array&lt;String&gt;** | Days of week. | [optional] |
+| **organizational_units** | [**Array&lt;ModelReference&gt;**](ModelReference.md) | Reference to the organizational units associated with this resource. | [optional] |
 | **time_of_day_interval** | [**TimeOfDayInterval**](TimeOfDayInterval.md) |  | [optional] |
-| **org_selection_mode** | **String** |  | [optional] |
-| **pos_types** | **Array&lt;String&gt;** |  | [optional] |
+| **org_selection_mode** | **String** | Org selection mode. | [optional] |
+| **pos_types** | **Array&lt;String&gt;** | Pos types. | [optional] |
 
 ## Example
 

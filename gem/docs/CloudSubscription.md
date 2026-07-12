@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **status** | **String** |  | [optional] |
+| **status** | **String** | Status. | [optional] |
 | **valid_to** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 
 ## Example
@@ -14,7 +14,7 @@ require 'korona-cloud-client'
 
 instance = KoronaCloudClient::CloudSubscription.new(
   status: null,
-  valid_to: 2018-11-22T08:40:21Z
+  valid_to: 2018-11-22T09:40:21+01:00
 )
 ```
 

@@ -6,11 +6,12 @@
 | ---- | ---- | ----------- | ----- |
 | **active** | **Boolean** | indicates whether the object is active for use or not | [optional][readonly] |
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
-| **revision** | **Integer** | the revision number of the object. revision numbers are unique per object-type. there is is no object of the same type with identical revision numbers. | [optional][readonly] |
-| **number** | **String** | number of the object, like it is set in backoffice; will be removed when active&#x3D;false | [optional] |
-| **data** | **String** |  | [optional] |
-| **type** | **String** |  | [optional] |
-| **usage_type** | **String** |  | [optional] |
+| **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
+| **number** | **String** | number of the object, like it is set in backoffice | [optional] |
+| **data** | **String** | Data. | [optional] |
+| **type** | **String** | Provider type of the linked payment service integration. | [optional] |
+| **usage_type** | **String** | Usage type. | [optional] |
+| **name** | **String** | Display name. | [optional] |
 
 ## Example
 
@@ -24,7 +25,8 @@ instance = KoronaCloudClient::Image.new(
   number: null,
   data: null,
   type: null,
-  usage_type: null
+  usage_type: null,
+  name: null
 )
 ```
 

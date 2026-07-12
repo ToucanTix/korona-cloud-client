@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **interval** | **Integer** |  | [optional] |
-| **type** | **String** |  | [optional] |
+| **interval** | **Integer** | Interval. | [optional] |
+| **type** | **String** | Provider type of the linked payment service integration. | [optional] |
 
 ## Example
 

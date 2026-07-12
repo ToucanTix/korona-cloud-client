@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **actual** | **Float** |  | [optional] |
-| **old** | **Float** |  | [optional][readonly] |
+| **actual** | **Float** | Actual. | [optional] |
+| **old** | **Float** | Old. | [optional][readonly] |
 
 ## Example
 

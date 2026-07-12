@@ -6,15 +6,15 @@
 | ---- | ---- | ----------- | ----- |
 | **active** | **Boolean** | indicates whether the object is active for use or not | [optional][readonly] |
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
-| **revision** | **Integer** | the revision number of the object. revision numbers are unique per object-type. there is is no object of the same type with identical revision numbers. | [optional][readonly] |
-| **number** | **String** | number of the object, like it is set in backoffice; will be removed when active&#x3D;false | [optional] |
-| **question_text** | **String** |  | [optional] |
-| **required_age** | **Integer** |  | [optional] |
-| **type** | **String** |  | [optional] |
-| **trigger_on** | **String** |  | [optional] |
-| **answer_options** | **Array&lt;String&gt;** |  | [optional] |
-| **failure_text** | **String** |  | [optional] |
-| **name** | **String** |  | [optional] |
+| **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
+| **number** | **String** | number of the object, like it is set in backoffice | [optional] |
+| **question_text** | **String** | Question text shown during cashier verification. | [optional] |
+| **required_age** | **Integer** | Minimum required age for the verification. | [optional] |
+| **type** | **String** | Type of cashier verification requirement. | [optional] |
+| **trigger_on** | **String** | Defines when the verification is triggered. | [optional] |
+| **answer_options** | **Array&lt;String&gt;** | Available answer options for option-based verifications. | [optional] |
+| **failure_text** | **String** | Message shown when verification fails. | [optional] |
+| **name** | **String** | Name of the cashier verification requirement. | [optional] |
 
 ## Example
 

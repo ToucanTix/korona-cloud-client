@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **String** |  | [optional] |
+| **name** | **String** | Name of the event category. | [optional] |
 | **product** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **external_id** | **String** |  | [optional] |
+| **external_id** | **String** | External identifier of the category. | [optional] |
 
 ## Example
 

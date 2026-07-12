@@ -4,15 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **String** |  | [optional] |
-| **name** | **String** |  | [optional] |
+| **id** | **String** | Id. | [optional] |
+| **name** | **String** | Display name. | [optional] |
 | **shelf_life** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 | **amount** | [**DispatchNotificationItemAmount**](DispatchNotificationItemAmount.md) |  | [optional] |
 | **identification** | [**DispatchNotificationItemIdentification**](DispatchNotificationItemIdentification.md) |  | [optional] |
-| **index** | **Integer** |  | [optional][readonly] |
+| **index** | **Integer** | Index. | [optional][readonly] |
 | **product** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **container** | [**DispatchNotificationItemContainer**](DispatchNotificationItemContainer.md) |  | [optional] |
-| **revision** | **Integer** |  | [optional][readonly] |
+| **revision** | **Integer** | Revision. | [optional][readonly] |
 | **import_data** | [**DispatchNotificationItemImport**](DispatchNotificationItemImport.md) |  | [optional] |
 
 ## Example
@@ -23,7 +23,7 @@ require 'korona-cloud-client'
 instance = KoronaCloudClient::DispatchNotificationItem.new(
   id: null,
   name: null,
-  shelf_life: 2018-11-22T08:40:21Z,
+  shelf_life: 2018-11-22T09:40:21+01:00,
   amount: null,
   identification: null,
   index: null,

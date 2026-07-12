@@ -1,6 +1,6 @@
 # KoronaCloudClient::CustomersApi
 
-All URIs are relative to *http://localhost:8080/web/api/v3*
+All URIs are relative to *https://128.koronacloud.com/web/api/v3*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -34,7 +34,7 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::CustomersApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 customer = [KoronaCloudClient::Customer.new] # Array<Customer> | array of new customers
 opts = {
   upsert: true, # Boolean | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead
@@ -42,7 +42,7 @@ opts = {
 }
 
 begin
-  
+
   result = api_instance.add_customers(korona_account_id, customer, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -58,7 +58,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.add_customers_with_http_info(korona_account_id, customer, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -72,7 +72,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **customer** | [**Array&lt;Customer&gt;**](Customer.md) | array of new customers |  |
 | **upsert** | **Boolean** | when set to true, updates the object instead of generating a already-exists-error; deprecated, use writeMode ADD_OR_UPDATE instead | [optional] |
 | **write_mode** | **String** | DEFAULT &#x3D; insert; ADD_OR_UPDATE &#x3D; insert or update, overwrite all non-null fields; ADD_OR_REPLACE &#x3D; insert or update, overwrite all fields | [optional] |
@@ -112,11 +112,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::CustomersApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 customer_id = 'customer_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   api_instance.delete_customer(korona_account_id, customer_id)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling CustomersApi->delete_customer: #{e}"
@@ -131,7 +131,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_customer_with_http_info(korona_account_id, customer_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -145,7 +145,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **customer_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -183,11 +183,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::CustomersApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 customer = [KoronaCloudClient::Customer.new] # Array<Customer> | array of existing customers (id or number required)
 
 begin
-  
+
   result = api_instance.delete_customers(korona_account_id, customer)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -203,7 +203,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.delete_customers_with_http_info(korona_account_id, customer)
   p status_code # => 2xx
   p headers # => { ... }
@@ -217,7 +217,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **customer** | [**Array&lt;Customer&gt;**](Customer.md) | array of existing customers (id or number required) |  |
 
 ### Return type
@@ -255,11 +255,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::CustomersApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 customer_id = 'customer_id_example' # String | id of the related object (important: id should match the uuid-format)
 
 begin
-  
+
   result = api_instance.get_customer(korona_account_id, customer_id)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -275,7 +275,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_customer_with_http_info(korona_account_id, customer_id)
   p status_code # => 2xx
   p headers # => { ... }
@@ -289,7 +289,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **customer_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 
 ### Return type
@@ -327,18 +327,20 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::CustomersApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 opts = {
   page: 56, # Integer | number of the page to fetch
   size: 56, # Integer | amount of objects to return per page
   sort: 'sort_example', # String | attribute to sort by (multiple separated by comma; max. 5)
   revision: 789, # Integer | last revision number, objects with a greater revision than this will be returned
   include_deleted: true, # Boolean | indicates deleted objects should be loaded or not (default: false)
-  number: 'number_example' # String | number of the related object
+  number: 'number_example', # String | number of the related object
+  name: 'name_example', # String | name of the related object
+  email: 'email_example' # String | email address of the related object
 }
 
 begin
-  
+
   result = api_instance.get_customers(korona_account_id, opts)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -354,7 +356,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.get_customers_with_http_info(korona_account_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -368,13 +370,15 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **page** | **Integer** | number of the page to fetch | [optional] |
 | **size** | **Integer** | amount of objects to return per page | [optional] |
 | **sort** | **String** | attribute to sort by (multiple separated by comma; max. 5) | [optional] |
 | **revision** | **Integer** | last revision number, objects with a greater revision than this will be returned | [optional] |
 | **include_deleted** | **Boolean** | indicates deleted objects should be loaded or not (default: false) | [optional] |
 | **number** | **String** | number of the related object | [optional] |
+| **name** | **String** | name of the related object | [optional] |
+| **email** | **String** | email address of the related object | [optional] |
 
 ### Return type
 
@@ -411,12 +415,12 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::CustomersApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 customer_id = 'customer_id_example' # String | id of the related object (important: id should match the uuid-format)
 customer = KoronaCloudClient::Customer.new # Customer | the properties to update of the customer
 
 begin
-  
+
   api_instance.update_customer(korona_account_id, customer_id, customer)
 rescue KoronaCloudClient::ApiError => e
   puts "Error when calling CustomersApi->update_customer: #{e}"
@@ -431,7 +435,7 @@ This returns an Array which contains the response data (`nil` in this case), sta
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_customer_with_http_info(korona_account_id, customer_id, customer)
   p status_code # => 2xx
   p headers # => { ... }
@@ -445,7 +449,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **customer_id** | **String** | id of the related object (important: id should match the uuid-format) |  |
 | **customer** | [**Customer**](Customer.md) | the properties to update of the customer |  |
 
@@ -484,11 +488,11 @@ KoronaCloudClient.configure do |config|
 end
 
 api_instance = KoronaCloudClient::CustomersApi.new
-korona_account_id = 'korona_account_id_example' # String | account id of the KORONA.cloud account
+korona_account_id = 'korona_account_id_example' # String | account id of the KORONA Studio account
 customer = [KoronaCloudClient::Customer.new] # Array<Customer> | array of existing customers (id or number required)
 
 begin
-  
+
   result = api_instance.update_customers(korona_account_id, customer)
   p result
 rescue KoronaCloudClient::ApiError => e
@@ -504,7 +508,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  
+
   data, status_code, headers = api_instance.update_customers_with_http_info(korona_account_id, customer)
   p status_code # => 2xx
   p headers # => { ... }
@@ -518,7 +522,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **korona_account_id** | **String** | account id of the KORONA.cloud account |  |
+| **korona_account_id** | **String** | account id of the KORONA Studio account |  |
 | **customer** | [**Array&lt;Customer&gt;**](Customer.md) | array of existing customers (id or number required) |  |
 
 ### Return type

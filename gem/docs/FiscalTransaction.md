@@ -4,19 +4,19 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **error_description** | **String** |  | [optional] |
-| **failed** | **Boolean** |  | [optional] |
+| **error_description** | **String** | Error description. | [optional] |
+| **failed** | **Boolean** | If true, failed. | [optional] |
 | **finish_time** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 | **first_process_time** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 | **fiscal_unit** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **number** | **Integer** |  | [optional] |
-| **print_link** | **String** |  | [optional] |
-| **print_qr_code** | **String** |  | [optional] |
-| **print_texts** | **Array&lt;Object&gt;** |  | [optional] |
-| **process_data** | **String** |  | [optional] |
-| **process_type** | **String** |  | [optional] |
-| **signature** | **String** |  | [optional] |
-| **signature_counter** | **Integer** |  | [optional] |
+| **number** | **Integer** | Number. | [optional] |
+| **print_link** | **String** | Print link. | [optional] |
+| **print_qr_code** | **String** | Print qr code. | [optional] |
+| **print_texts** | **Array&lt;String&gt;** | Print texts. | [optional] |
+| **process_data** | **String** | Process data. | [optional] |
+| **process_type** | **String** | Process type. | [optional] |
+| **signature** | **String** | Signature. | [optional] |
+| **signature_counter** | **Integer** | Signature counter. | [optional] |
 | **start_time** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional] |
 
 ## Example
@@ -27,8 +27,8 @@ require 'korona-cloud-client'
 instance = KoronaCloudClient::FiscalTransaction.new(
   error_description: null,
   failed: null,
-  finish_time: 2018-11-22T08:40:21Z,
-  first_process_time: 2018-11-22T08:40:21Z,
+  finish_time: 2018-11-22T09:40:21+01:00,
+  first_process_time: 2018-11-22T09:40:21+01:00,
   fiscal_unit: null,
   number: null,
   print_link: null,
@@ -38,7 +38,7 @@ instance = KoronaCloudClient::FiscalTransaction.new(
   process_type: null,
   signature: null,
   signature_counter: null,
-  start_time: 2018-11-22T08:40:21Z
+  start_time: 2018-11-22T09:40:21+01:00
 )
 ```
 

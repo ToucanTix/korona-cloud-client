@@ -6,18 +6,18 @@
 | ---- | ---- | ----------- | ----- |
 | **active** | **Boolean** | indicates whether the object is active for use or not | [optional][readonly] |
 | **id** | **String** | global object uuid (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) | [optional] |
-| **revision** | **Integer** | the revision number of the object. revision numbers are unique per object-type. there is is no object of the same type with identical revision numbers. | [optional][readonly] |
-| **number** | **String** | number of the object, like it is set in backoffice; will be removed when active&#x3D;false | [optional] |
+| **revision** | **Integer** | Increments every time this object is saved. Unique per object type; use it to track changes and pull only updates (delta sync). | [optional][readonly] |
+| **number** | **String** | number of the object, like it is set in backoffice | [optional] |
 | **booking_api_user** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **booking_time** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional][readonly] |
+| **booking_time** | **Time** | Timestamp when the stock adjustment was booked. yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional][readonly] |
 | **booking_user** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **external_id** | **String** |  | [optional] |
-| **finish_time** | **Time** | yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional][readonly] |
-| **production** | **Boolean** |  | [optional] |
-| **reason** | **String** |  | [optional] |
-| **receipt_number** | **String** |  | [optional] |
+| **external_id** | **String** | External identifier from a third-party system. | [optional] |
+| **finish_time** | **Time** | Timestamp when the stock adjustment was finished. yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX | [optional][readonly] |
+| **production** | **Boolean** | If true, this stock adjustment belongs to production or conversion. A common example is building a gift basket where individual item quantities are reduced and the boundle quantity is increased. | [optional] |
+| **reason** | **String** | Reason for performing the stock adjustment. | [optional] |
+| **receipt_number** | **String** | Receipt number generated for this stock adjustment. | [optional] |
 | **warehouse** | [**ModelReference**](ModelReference.md) |  | [optional] |
-| **status** | **String** |  | [optional][readonly] |
+| **status** | **String** | Current status of the stock adjustment. | [optional][readonly] |
 
 ## Example
 
@@ -30,10 +30,10 @@ instance = KoronaCloudClient::StockAdjustment.new(
   revision: null,
   number: null,
   booking_api_user: null,
-  booking_time: 2018-11-22T08:40:21Z,
+  booking_time: 2018-11-22T09:40:21+01:00,
   booking_user: null,
   external_id: null,
-  finish_time: 2018-11-22T08:40:21Z,
+  finish_time: 2018-11-22T09:40:21+01:00,
   production: null,
   reason: null,
   receipt_number: null,

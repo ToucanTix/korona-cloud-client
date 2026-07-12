@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **price_transfer** | **Boolean** |  | [optional] |
+| **price_transfer** | **Boolean** | If true, price transfer. | [optional] |
 | **product** | [**ModelReference**](ModelReference.md) |  | [optional] |
 | **tag** | [**ModelReference**](ModelReference.md) |  | [optional] |
 
