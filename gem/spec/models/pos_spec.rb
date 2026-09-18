@@ -20,6 +20,24 @@ require 'date'
 describe KoronaCloudClient::Pos do
   let(:instance) { KoronaCloudClient::Pos.new }
 
+  describe 'POS type deserialization' do
+    it 'deserializes KORONA POS NEXT SCO records in a POS list response' do
+      response = KoronaCloudClient::ResultListPos.build_from_hash(
+        results: [{ type: 'KORONA_POS_NEXT_SCO', revision: 410, active: true }]
+      )
+
+      pos = response.results.fetch(0)
+      expect(pos.type).to eq('KORONA_POS_NEXT_SCO')
+      expect(pos.revision).to eq(410)
+      expect(pos).to be_valid
+    end
+
+    it 'continues to reject unsupported POS types' do
+      expect { described_class.build_from_hash(type: 'UNRECOGNIZED_TYPE') }
+        .to raise_error(ArgumentError, /invalid value for "type"/)
+    end
+  end
+
   describe 'test an instance of Pos' do
     it 'should create an instance of Pos' do
       expect(instance).to be_instance_of(KoronaCloudClient::Pos)

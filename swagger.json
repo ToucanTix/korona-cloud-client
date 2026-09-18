@@ -58924,7 +58924,7 @@
           "type" : {
             "type" : "string",
             "description" : "Provider type of the linked payment service integration.",
-            "enum" : [ "STANDARD", "EXTERNAL", "EXTERNAL_WEBSHOP", "TEMPORARY", "INVOICING", "EXPRESS", "SCO", "WEBSHOP", "MISC", "KORONA_POS_NEXT" ]
+            "enum" : [ "STANDARD", "EXTERNAL", "EXTERNAL_WEBSHOP", "TEMPORARY", "INVOICING", "EXPRESS", "SCO", "WEBSHOP", "MISC", "KORONA_POS_NEXT", "KORONA_POS_NEXT_SCO" ]
           },
           "scoConfiguration" : {
             "$ref" : "#/components/schemas/ModelReference"
